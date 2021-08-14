@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# PlanetZoo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Author**: Osaid Alhomidy (Aseed Alhammedi) / Naim AlOmari / Abdalla Hirzalla / Khaled Alqrainy / Alaa Baroud
 
-## Available Scripts
+**Version**: 0.0.0
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+A
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
-### `npm test`
+## Architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Javascript
+- Nodejs
+- Mongoose
+- Axios
+- ExpressJs
+- dotEnv
+- cors
 
-### `npm run build`
+## Change Log
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credit and Collaborations
 
-### `npm run eject`
+Osaid Alhomidy (Aseed Alhammedi) / Naim AlOmari / Abdalla Hirzalla / Khaled Alqrainy / Alaa Baroud
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Agreement
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Cooperation Plan
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Every person on your team is an asset. This is your chance to discover the hidden strengths and areas for growth for each team member.
 
-## Learn More
+Describe at least:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+What are the key strengths of each person on the team?
+How can you best utilize these strengths in the execution of your project?
+In which professional competencies do you each want to develop greater strength?
+Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Conflict Plan
 
-### Code Splitting
+Your team should agree on a process for handing disagreements, should they arise. It is better to have a plan in place ahead of time so you can all refer back to it when necessary.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Describe at least:
 
-### Analyzing the Bundle Size
+What will be your group’s process to resolve conflict, when it arises?
+What will your team do if one person is taking over the project and not letting the other members contribute?
+How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
+How will you raise concerns to members who are not adequately contributing?
+How and when will you escalate the conflict if your resolution attempts are unsuccessful?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Communication Plan
 
-### Making a Progressive Web App
+Before beginning to tackle the project, determine how your group will communicate with each other. This is not an individual effort. Make sure everyone feels comfortable with the identified methods of speaking up.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Describe at least:
 
-### Advanced Configuration
+What hours will you be available to communicate?
+What platforms will you use to communicate (ie. Slack, phone …)?
+How often will you take breaks?
+What is your plan if you start to fall behind?
+How will you communicate after hours and on the weekend?
+What is your strategy for ensuring everyone’s voice is heard?
+How will you ensure that you are creating a safe environment where everyone feels comfortable speaking up?
+Work Plan
+Explain your work plan to track whether everyone is contributing equally to all parts of the project, and that each person is working on “meaty” problems. This should prevent “lone wolf” efforts and “siloed” efforts.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Describe at least:
 
-### Deployment
+How you will identify tasks, assign tasks, know when they are complete, and manage work in general?
+What project management tool will be used?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Git Process
 
-### `npm run build` fails to minify
+Plan out what your team’s Git workflow looks like for coding tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Describe at least:
+
+What components of your project will live on GitHub?
+How will you share the repository with your teammates?
+What is your Git flow?
+Will you be using a PR review workflow? If so, consider:
+How many people must review a PR?
+Who merges PRs?
+How often will you merge?
+How will you communicate that it’s time to merge?
