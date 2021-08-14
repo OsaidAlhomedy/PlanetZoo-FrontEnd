@@ -67,7 +67,9 @@ class Login extends Component {
               </Col>
             </Row>
             <Row className="d-flex justify-content-center">
-              <h2 className="text-center mt-3">Please Sign in to continue</h2>
+              <h2 className="text-center text-dark mt-3">
+                Please Sign in to continue
+              </h2>
             </Row>
             <Row className="d-flex justify-content-center">
               <Col xs={6}>
@@ -86,7 +88,7 @@ class Login extends Component {
                     </FloatingLabel>
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Group className="mb-5" controlId="formBasicPassword">
                     <FloatingLabel
                       controlId="floatingPassInput"
                       label="Password"
@@ -99,12 +101,6 @@ class Login extends Component {
                         name="pass"
                       />
                     </FloatingLabel>
-                    <Form.Text className="text-muted text-center">
-                      Your password must be above 8 characters
-                    </Form.Text>
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
                   </Form.Group>
                   <Form.Group
                     className="mb-5 text-center d-grid gap-2"
@@ -118,7 +114,7 @@ class Login extends Component {
                     className="mb-3 text-center "
                     controlId="formBasicCheckbox"
                   >
-                    <h4>Don't have an account ?</h4>
+                    <h4 className="text-dark">Don't have an account ?</h4>
                     <LoginButton />
                     <LogoutButton />
                   </Form.Group>
