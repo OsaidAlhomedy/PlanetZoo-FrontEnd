@@ -6,7 +6,7 @@
 
 ## Overview
 
-A
+**Planet Zoo** is a website that allows people to help animals around the world in many ways. People can adopt a pet, donate   food, Donate money via paypal, credit card or cash. Also you can  explore information about animals based on your search and read some blogs about animals. 
 
 ## Getting Started
 
@@ -47,6 +47,13 @@ How can you best utilize these strengths in the execution of your project?
 In which professional competencies do you each want to develop greater strength?
 Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
 
+- Each one of the team members is special in a way or another, **Osaid** is our team leader, he is so organized and a hard worker. **Khaled** and **Naim** are known for their Technical skills. **Abdullah** is the one with a positive attitude. and **Alaa** is so curious and ambitious. working with each other will help utilizing these strengths each one has.
+
+- We are all good at communication and teamwork so it won't be a big problem for us. We should all work on improving Critical Thinking skills. 
+
+- We are planning to have a 30 minutes meeting every morning to keep everyone updated.
+
+
 ### Conflict Plan
 
 Your team should agree on a process for handing disagreements, should they arise. It is better to have a plan in place ahead of time so you can all refer back to it when necessary.
@@ -58,6 +65,12 @@ What will your team do if one person is taking over the project and not letting 
 How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
 How will you raise concerns to members who are not adequately contributing?
 How and when will you escalate the conflict if your resolution attempts are unsuccessful?
+
+-  In order to prevent conflicts, Only the team leader has the right to merge the work.
+
+- As a group, we will use the meeting to prevent such things. But if anyone tried to control others, the team leader will talk to him/her privately.
+
+- of course, we are all in different levels of knowledge, so we decided from day one to help each other. In the daily meeting, we will make sure that everyone understands what's happening with others. 
 
 ### Communication Plan
 
@@ -79,6 +92,17 @@ Describe at least:
 
 How you will identify tasks, assign tasks, know when they are complete, and manage work in general?
 What project management tool will be used?
+
+- here is our plan
+ 9:00 am - 1:00 pm 
+ **break** 
+ 2:00 pm - 6:00 pm
+ **break**
+ 7:00 pm - 11:00 pm
+- we will keep in touch via slack.
+- we will keep pushing ourselves and give the help needed to each other.
+- in meeting,The team leader takes all t=members opinions to insure that all voices are heard.
+- We care a lot about each other's mental health, so are trying our best to keep the meeting fun and the working times flexible.
 
 ### Git Process
 
