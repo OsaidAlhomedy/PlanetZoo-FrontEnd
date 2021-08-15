@@ -2,16 +2,22 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 import "./Test.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import loadingGIF from "./assets/loading.gif";
 import Header from "./components/Header";
 import Blog from "./components/blogs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Profile from "./components/Profile";
+// import Footer from "./components/Footer";
+import Home from "./Home";
+import Logout from "./components/Logout"
 
 class Test extends Component {
   render() {
-    const { isLoading, error, isAuthenticated } = this.props.auth0;
-
+    const { isLoading, error } = this.props.auth0;
+    const {isAuthenticated}=this.props.auth0;
     return isLoading ? (
       <div className="text-center">
         <img className="loadingImg" src={loadingGIF} alt="loading" />
@@ -20,11 +26,15 @@ class Test extends Component {
       <h2>Oops... {error.message}</h2>
     ) : (
       <Router>
+        {/* <Login/> */}
         <Switch>
           <Route exact path="/">
             {isAuthenticated ? <Blog addBlog={this.addBlog} /> : <Login />}
+
           </Route>
+
         </Switch>
+
       </Router>
     );
   }
