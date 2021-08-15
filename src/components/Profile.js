@@ -8,8 +8,9 @@ class Profile extends Component {
     const { user, isAuthenticated } = this.props.auth0;
     return (
       <>
-        
+        {isAuthenticated && (
           <Container >
+              
             <Header />
             <Row className='text-center mb-4'>
               <Col>
@@ -33,9 +34,10 @@ class Profile extends Component {
             </Col>
             </Row>
           </Container>
-        
+        )}
       </>
     );
   }
 }
+
 export default withAuth0(Profile);

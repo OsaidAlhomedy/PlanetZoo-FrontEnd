@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Header extends React.Component {
     render(){
+      const { user, isAuthenticated } = this.props.auth0;
 
         return (
 <>
@@ -32,13 +33,18 @@ class Header extends React.Component {
           <NavDropdown.Item href="Contribute">Contribute</NavDropdown.Item>
           <NavDropdown.Item href="Give Up Your Animal">GiveUpYourAnimal</NavDropdown.Item>
         </NavDropdown>
-        <NavDropdown title="Hello Guest" id="basic-nav-dropdown">
+
+        <NavDropdown  title= {isAuthenticated ?  `Hello ${user.name}` : `Hello Guest `} id="basic-nav-dropdown">
+    
         <NavDropdown.Item href="profile">
+          
           Profile
           </NavDropdown.Item>
           <NavDropdown.Item href="login">
+          
           Login
           </NavDropdown.Item>
+          
         </NavDropdown>
 
     </Nav>
@@ -48,4 +54,5 @@ class Header extends React.Component {
         )
     }
 }
+
 export default withAuth0(Header);
