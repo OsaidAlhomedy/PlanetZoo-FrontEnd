@@ -1,4 +1,6 @@
 import React from 'react';
+import { withAuth0 } from "@auth0/auth0-react";
+
 import {Navbar,Container,Nav,NavDropdown,Col,Row} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,19 +20,31 @@ class Header extends React.Component {
           height="100"
           className="d-inline-block "
         />
-      ZOO PLANET 
+      ZOO PLANET  
       </Navbar.Brand>
     </Container>
     <Nav 
       className="mr-auto my-2 my-lg-0">
-      <Nav.Link href="home" > Home </Nav.Link>
+      <Nav.Link href="home" > Home  </Nav.Link>
       <Nav.Link href="blog">Blog</Nav.Link>
       <NavDropdown title="Adopt/Donate" id="basic-nav-dropdown">
           <NavDropdown.Item href="Adopt an Animal">AdoptAnAnimal</NavDropdown.Item>
           <NavDropdown.Item href="Contribute">Contribute</NavDropdown.Item>
           <NavDropdown.Item href="Give Up Your Animal">GiveUpYourAnimal</NavDropdown.Item>
         </NavDropdown>
-      <Nav.Link href="aboutus">AboutUs</Nav.Link>
+
+        <NavDropdown { isAuthenticated? : `Hello ${user.name}`} title="Hello " id="basic-nav-dropdown">
+        <NavDropdown.Item href="profile">
+          
+          Profile
+          </NavDropdown.Item>
+          <NavDropdown.Item href="login">
+          
+          Login
+          </NavDropdown.Item>
+          
+        </NavDropdown>
+
     </Nav>
     </Container>
   </Navbar>
@@ -39,4 +53,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default withAuth0(Header);
