@@ -1,8 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
-import Blogs from "./Blogs";
 import Button from "react-bootstrap/Button";
-
 class Home extends React.Component {
   render() {
     return (
