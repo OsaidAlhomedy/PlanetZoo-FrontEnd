@@ -8,9 +8,10 @@ import tigers from '../assets/tigers.jpg'
 import bird from '../assets/bird.jpg'
 import horseimg from '../assets/depositphotos_21193779-stock-photo-gray-arabian-horse-gallops-on.jpg'
 import { Button } from "bootstrap";
-
+import Doncky from '../assets/7mar.jpg'
 import { Route } from 'react-router-dom'
-
+import Rooster from '../assets/rooster.jpg'
+import chrochodile from '../assets/chrochodile.jpg'
 
 
 
@@ -88,7 +89,7 @@ class Home extends React.Component {
 
 
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img variant="top" src={Doncky}/>
     <Card.Body>
       <Card.Title>Card title</Card.Title>
       <Card.Text>
@@ -112,7 +113,7 @@ class Home extends React.Component {
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img variant="top" src={Rooster} />
     <Card.Body>
       <Card.Title>Card title</Card.Title>
       <Card.Text>
@@ -132,7 +133,7 @@ class Home extends React.Component {
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card.Img variant="top" src={chrochodile} />
     <Card.Body>
       <Card.Title>Card title</Card.Title>
       <Card.Text>
