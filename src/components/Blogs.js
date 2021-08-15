@@ -35,7 +35,6 @@ class Blog extends React.Component {
 
   addBlog = (event) => {
     event.preventDefault();
-    console.log(event.target.file[0]);
     const title = event.target.title.value;
     const headline = event.target.headline.value;
     const article = event.target.article.value;
