@@ -11,8 +11,9 @@ class Header extends React.Component {
     const { user, isAuthenticated } = this.props.auth0;
 
     return (
-      <>
-        <Navbar bg="dark" variant="dark" className="py-2">
+      <Container>
+        <Row>
+          <Navbar bg="dark" variant="dark" className="py-2">
             <Navbar.Brand href="/" className="ml-2">
               <img alt="logo" src={imgLogo} width="250px" />
             </Navbar.Brand>
@@ -49,8 +50,9 @@ class Header extends React.Component {
                 )}
               </NavDropdown>
             </Nav>
-        </Navbar>
-      </>
+          </Navbar>
+        </Row>
+      </Container>
     );
   }
 }
