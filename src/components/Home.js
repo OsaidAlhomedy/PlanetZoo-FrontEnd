@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
 import {Card, CardGroup, } from 'react-bootstrap'
-
+import '../Test.css'
 import ghazal from '../assets/7b8d864e41342a71212d90f4294ea069.jpg'
 import banda from '../assets/banda.jpg'
 import tigers from '../assets/tigers.jpg'
@@ -98,12 +98,12 @@ class Home extends React.Component {
       
      
   <Route render={({ history}) => (
-    <Button 
+    <button class='buttons'
       type='button'
       onClick={() => { history.push('/blog') }}
     >
       Read more!
-    </Button>
+    </button>
   )} />
 
     </Card.Body>
@@ -119,6 +119,14 @@ class Home extends React.Component {
         This card has supporting text below as a natural lead-in to additional
         content.{' '}
       </Card.Text>
+      <Route render={({ history}) => (
+    <button class='buttons'
+      type='button'
+      onClick={() => { history.push('/blog') }}
+    >
+      Read more!
+    </button>
+  )} />
     </Card.Body>
     <Card.Footer>
     </Card.Footer>
@@ -132,6 +140,14 @@ class Home extends React.Component {
         additional content. This card has even longer content than the first to
         show that equal height action.
       </Card.Text>
+      <Route render={({ history}) => (
+    <button class='buttons'
+      type='button'
+      onClick={() => { history.push('/blog') }}
+    >
+      Read more!
+    </button>
+  )} />
     </Card.Body>
     <Card.Footer>
     </Card.Footer>
