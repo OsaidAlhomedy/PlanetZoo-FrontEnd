@@ -91,7 +91,7 @@ class Home extends React.Component {
   <Card>
     <Card.Img variant="top" src={Doncky}/>
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>حمار بلدي أصيل</Card.Title>
       <Card.Text>
         This is a wider card with supporting text below as a natural lead-in to
         additional content. This content is a little bit longer.
@@ -115,7 +115,7 @@ class Home extends React.Component {
   <Card>
     <Card.Img variant="top" src={Rooster} />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>ديك غزاوي أصيل</Card.Title>
       <Card.Text>
         This card has supporting text below as a natural lead-in to additional
         content.{' '}
@@ -135,7 +135,7 @@ class Home extends React.Component {
   <Card>
     <Card.Img variant="top" src={chrochodile} />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>تمساح أفريقي وهر اصيل</Card.Title>
       <Card.Text>
         This is a wider card with supporting text below as a natural lead-in to
         additional content. This card has even longer content than the first to
