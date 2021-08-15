@@ -22,7 +22,7 @@ class Test extends Component {
       <Router>
         <Switch>
           <Route exact path="/">
-            {isAuthenticated ? <Blog /> : <Login />}
+            {isAuthenticated ? <Blog addBlog={this.addBlog} /> : <Login />}
           </Route>
         </Switch>
       </Router>
