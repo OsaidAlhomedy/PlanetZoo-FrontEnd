@@ -21,6 +21,7 @@ class Test extends Component {
       <Router>
         <Switch>
           <Route exact path="/">
+            <Header />
             <Login />;
           </Route>
         </Switch>
