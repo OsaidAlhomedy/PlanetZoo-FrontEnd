@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import "./Test.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import loadingGIF from "./assets/loading.gif";
+import Header from "./components/Header";
 
 class Test extends Component {
   render() {
