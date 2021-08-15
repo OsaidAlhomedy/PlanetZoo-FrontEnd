@@ -37,7 +37,9 @@ class Test extends Component {
             <Profile />
           </Route>
           <Route exact path="/donation"></Route>
-          <Route exact path="/login"></Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
           <Route exact path="/adoption"></Route>
           <Route exact path="/giveAnimals"></Route>
           <Route exact path="/aboutus"></Route>
