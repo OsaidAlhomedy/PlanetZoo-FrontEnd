@@ -7,12 +7,12 @@ import "./Test.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import loadingGIF from "./assets/loading.gif";
 import Header from "./components/Header";
+import Blog from "./components/blogs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Profile from "./components/Profile";
 // import Footer from "./components/Footer";
 import Home from "./Home";
 import Logout from "./components/Logout"
-
 
 class Test extends Component {
   render() {
@@ -28,21 +28,9 @@ class Test extends Component {
       <Router>
         {/* <Login/> */}
         <Switch>
-          <Route exact path="/" >
-            {isAuthenticated ? <Header /> : <Login/> }
-            <Footer/>
-            
-     </Route>
-          <Route exact path="/home">
-            <Home/>
-            <Footer/>
-           </Route>
-          <Route exact path="/Profile">
-            <Profile />
-          </Route>
+          <Route exact path="/">
+            {isAuthenticated ? <Blog addBlog={this.addBlog} /> : <Login />}
 
-          <Route exact path="/profile">
-          <Profile />;
           </Route>
 
         </Switch>
