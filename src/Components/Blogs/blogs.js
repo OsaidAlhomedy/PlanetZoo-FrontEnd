@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+
 
 
 class Blog extends React.Component {
@@ -24,6 +26,19 @@ class Blog extends React.Component {
 
   </Card.ImgOverlay>
 </Card>
+
+<br>
+</br> 
+<>
+<Form.Control size="sm" type="text" placeholder="Title" />
+  <br />
+  <Form.Control type="text" placeholder="Headline" />
+  <br />
+  <Form.Control size="lg" type="text" placeholder="Write Here your Blog" />
+  <br />
+  
+  
+</>
             </>
             
         )
