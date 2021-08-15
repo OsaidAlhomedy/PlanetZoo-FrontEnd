@@ -6,10 +6,11 @@ import "./Test.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import loadingGIF from "./assets/loading.gif";
 import Header from "./components/Header";
+import Blog from "./components/blogs";
 
 class Test extends Component {
   render() {
-    const { isLoading, error } = this.props.auth0;
+    const { isLoading, error, isAuthenticated } = this.props.auth0;
 
     return isLoading ? (
       <div className="text-center">
@@ -21,8 +22,7 @@ class Test extends Component {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Header />
-            <Login />;
+            {isAuthenticated ? <Blog /> : <Login />}
           </Route>
         </Switch>
       </Router>
