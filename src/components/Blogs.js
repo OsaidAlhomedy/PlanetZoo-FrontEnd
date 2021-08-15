@@ -103,13 +103,13 @@ class Blog extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Row className="text-center bg-light py-5">
+      <Container className="border">
+        <Row className="text-center py-5">
           <h1>The Blog</h1>
         </Row>
 
-        <Row className="mb-5">
-          <Col>
+        <Row className="mb-5 justify-content-center">
+          <Col md={10}>
             {this.state.blogsData
               ? this.state.blogsData.map((blog) => (
                   <Article
@@ -123,7 +123,7 @@ class Blog extends React.Component {
           </Col>
         </Row>
 
-        <Row className="bg-light mb-5 py-5">
+        <Row className="bg-light py-5">
           <Form onSubmit={(event) => this.addBlog(event)}>
             <Form.Group className="mb-5">
               <h2 className="text-center">

@@ -22,7 +22,7 @@ class Header extends React.Component {
               <Nav.Link href="blog">Blog</Nav.Link>
               {isAuthenticated ? (
                 <NavDropdown title="Adopt/Donate" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="adoption" className="h4">
+                  <NavDropdown.Item href="adoption">
                     AdoptAnAnimal
                   </NavDropdown.Item>
                   <NavDropdown.Item href="donation">
@@ -35,7 +35,8 @@ class Header extends React.Component {
               ) : (
                 ""
               )}
-
+            </Nav>
+            <Nav className="ms-auto">
               <NavDropdown
                 title={
                   isAuthenticated ? `Hello, ${user.name}` : `Hello, Guest `
