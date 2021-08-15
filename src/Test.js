@@ -8,9 +8,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import loadingGIF from "./assets/loading.gif";
 import Header from "./components/Header";
 import Blog from "./components/Blogs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Profile from "./components/Profile";
-// import Footer from "./components/Footer";
 import Home from "./components/Home";
 
 class Test extends Component {
@@ -31,7 +29,9 @@ class Test extends Component {
             <Footer />
           </Route>
           <Route exact path="/blog">
+            <Header />
             <Blog />
+            <Footer />
           </Route>
           <Route exact path="/profile">
             <Profile />
