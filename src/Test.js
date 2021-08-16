@@ -11,6 +11,7 @@ import Blog from "./components/Blogs";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
 import GiveAnimal from "./components/GiveAnimal";
+import Adoption from "./components/Adoption";
 
 class Test extends Component {
   render() {
@@ -41,7 +42,9 @@ class Test extends Component {
           <Route exact path="/login">
             <Login />
           </Route>
-          <Route exact path="/adoption"></Route>
+          <Route exact path="/adoption">
+            <Adoption />
+          </Route>
           <Route exact path="/giveAnimals">
             <Header />
             <GiveAnimal />
