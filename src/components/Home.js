@@ -12,6 +12,7 @@ import Doncky from '../assets/7mar.jpg'
 import { Route } from 'react-router-dom'
 import Rooster from '../assets/rooster.jpg'
 import chrochodile from '../assets/chrochodile.jpg'
+import InfoForm from "./InfoForm";
 
 
 
@@ -154,6 +155,14 @@ class Home extends React.Component {
     </Card.Footer>
   </Card>
 </CardGroup>
+
+<br></br>
+
+<InfoForm/>
+
+<br>
+</br>
+
       </>
     );
   }
