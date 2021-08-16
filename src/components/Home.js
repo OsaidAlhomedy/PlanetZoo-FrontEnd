@@ -5,7 +5,7 @@ import '../Test.css'
 import { Route } from 'react-router-dom'
 
 
-import huski from '../assets/jamie-street-0nk6XZp7_1E-unsplash.jpg'
+import huski from '../assets/gary-samaha-bsAfOX0WDsU-unsplash.jpg'
 import snjab from '../assets/jennifer-chen-h0GbJwpMNiM-unsplash.jpg'
 import abusha3ar from '../assets/john-tecuceanu-v1aexnCrC00-unsplash.jpg'
 import Bird from '../assets/ahmed-zayan-iANR5BfavC8-unsplash.jpg'
