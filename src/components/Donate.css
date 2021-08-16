@@ -1,0 +1,22 @@
+ *{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ 
+ .paragraph {
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: large;
+    font-weight: bold;
+ }
+
+ .para {
+    text-align: justify;
+    padding-right: 10%;
+ }
+
+ iframe{
+     padding-left: 10%;
+ }
+ 
+
