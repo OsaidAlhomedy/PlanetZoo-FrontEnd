@@ -120,7 +120,7 @@ class GiveAnimal extends Component {
     this.getAnimals();
   };
 
-  updateAnimalFormShow = (name, type, breed, age, description) => {
+  updateAnimalFormShow = (name, type, breed, age, description, id) => {
     this.setState({
       previousData: {
         name: name,
@@ -128,6 +128,7 @@ class GiveAnimal extends Component {
         breed: breed,
         age: age,
         description: description,
+        id: id,
       },
       updateModalShow: true,
     });
@@ -139,18 +140,28 @@ class GiveAnimal extends Component {
     });
   };
 
-  updateAnimal = (event) => {
+  updateAnimal = async (event) => {
     event.preventDefault();
-    console.log(event.target.petName.value);
+    const idNum = this.state.previousData.id;
+    const petData = {
+      petName: event.target.petName.value,
+      petType: event.target.petType.value,
+      petBreed: event.target.petBreed.value,
+      petAge: event.target.petAge.value,
+      petDesc: event.target.petDesc.value,
+    };
 
-    // await axios
-    //   .put(`${process.env.REACT_APP_SERVER}/updateAnimal/${idNum}`)
-    //   .then((result) => {
-    //     console.log(result.data);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    await axios
+      .put(`${process.env.REACT_APP_SERVER}/updateAnimal/${idNum}`, petData)
+      .then((result) => {
+        this.setState({
+          petData: result.data,
+        });
+        this.getAnimals();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   render() {

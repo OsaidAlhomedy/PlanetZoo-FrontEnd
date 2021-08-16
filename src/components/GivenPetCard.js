@@ -52,7 +52,8 @@ class GivenPetCard extends Component {
                       this.props.type,
                       this.props.breed,
                       this.props.age,
-                      this.props.description
+                      this.props.description,
+                      this.props.id
                     )
                   }
                 >
