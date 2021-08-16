@@ -125,7 +125,7 @@ class Blog extends React.Component {
 
         <Row className="bg-light py-5">
           <Form onSubmit={(event) => this.addBlog(event)}>
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-5" id="formMaybe">
               <h2 className="text-center">
                 Want to contribute ? , Write your article here and leave the
                 rest to us

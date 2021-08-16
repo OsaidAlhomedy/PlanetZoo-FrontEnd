@@ -22,7 +22,7 @@ class Header extends React.Component {
               <Nav.Link href="blog">Blog</Nav.Link>
               {isAuthenticated ? (
                 <NavDropdown title="Adopt/Donate" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="adoption">
+                  <NavDropdown.Item href="adoption" className="h2">
                     AdoptAnAnimal
                   </NavDropdown.Item>
                   <NavDropdown.Item href="donation">
