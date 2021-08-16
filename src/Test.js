@@ -11,6 +11,8 @@ import Blog from "./components/Blogs";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
 import GiveAnimal from "./components/GiveAnimal";
+import Donate from "./components/Donate";
+
 
 class Test extends Component {
   render() {
@@ -37,7 +39,11 @@ class Test extends Component {
           <Route exact path="/profile">
             <Profile />
           </Route>
-          <Route exact path="/donation"></Route>
+          <Route exact path="/donation">
+            <Header/>
+            <Donate/>
+            <Footer/>
+          </Route>
           <Route exact path="/login">
             <Login />
           </Route>
