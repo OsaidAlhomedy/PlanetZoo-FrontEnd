@@ -235,7 +235,7 @@ class Footer extends React.Component {
 //       </Container>
 // =======
 <>
-<footer className="bg-dark text-center text-white">
+<footer className="bg-dark text-center text-white" >
   <div className="container p-4">
     <section className="mb-4">
       
