@@ -1,10 +1,9 @@
 import React from "react";
 import { withAuth0 } from "@auth0/auth0-react";
-import { Navbar, Container, Nav, NavDropdown, Col, Row } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import imgLogo from "../assets/logoRightText-01.png";
 import LogoutButton from "./Logout";
-import Login from "./Login";
 
 class Header extends React.Component {
   render() {
@@ -22,7 +21,7 @@ class Header extends React.Component {
               <Nav.Link href="blog">Blog</Nav.Link>
               {isAuthenticated ? (
                 <NavDropdown title="Adopt/Donate" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="adoption" className="h2">
+                  <NavDropdown.Item href="adoption">
                     AdoptAnAnimal
                   </NavDropdown.Item>
                   <NavDropdown.Item href="donation">
