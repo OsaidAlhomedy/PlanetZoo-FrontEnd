@@ -59,11 +59,11 @@ class Blog extends React.Component {
       });
   };
 
-  componentDidUpdate(prevState) {
-    if (this.state.blogsData !== prevState.blogData) {
-      this.getArticles();
-    }
-  }
+  // componentDidUpdate(prevState) {
+  //   if (this.state.blogsData !== prevState.blogData) {
+  //     this.getArticles();
+  //   }
+  // }
 
   fileHandler = async (e) => {
     console.log(e.target.files[0]);
