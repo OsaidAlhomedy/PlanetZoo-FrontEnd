@@ -173,7 +173,7 @@ class Home extends React.Component {
               </Col>
 
               <Col className='border'>
-                <h3>Crulity free checker  </h3>
+                <h3>Cruelty free checker  </h3>
               </Col>
 
             </Row>
