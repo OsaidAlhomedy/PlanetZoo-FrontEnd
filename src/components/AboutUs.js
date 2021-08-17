@@ -8,7 +8,7 @@ import {
 
   Image,
 } from "react-bootstrap";
-import team from "../assets/team2.jpg";
+import team from "../assets/bc551c630c7f41618771195f9563d7bf-0001.jpg";
 
 import Alaa from "../assets/Alaa.png";
 import Khaled from "../assets/khaled.png";
@@ -26,7 +26,7 @@ class aboutUs extends React.Component {
           <Row className="text-center">
               <Image src={team} fluid />
              {/* <h1 className="m-4"> Meet out Team </h1> */}
-            <h3 >
+            <h3 className='mt-5'>
             "If you want to go fast, go alone. If you want to go far, go
               together." – African Proverb
             </h3>
@@ -40,7 +40,7 @@ class aboutUs extends React.Component {
           <Row className="text-center m-5">
             <Row xs={2} md={4}>
               <Col className="p-2 justify-content-center d-flex">
-                <Card style={{ width: "18rem" }}>
+                <Card  border="primary" style={{ width: "18rem" }}>
                   <Card.Img variant="top" src={Osaid}  />
                   <Card.Body>
                     <Card.Title className="text-dark">Osaid Alhomedy</Card.Title>
@@ -75,7 +75,7 @@ class aboutUs extends React.Component {
               </Col>
 
               <Col className="p-2 justify-content-center d-flex">
-                <Card style={{ width: "18rem" }}>
+                <Card border="primary" style={{ width: "18rem" }}>
                   <Card.Img variant="top" src={Naim} />
                   <Card.Body>
                     <Card.Title className="text-dark">Naim AlOmari</Card.Title>
@@ -86,11 +86,30 @@ class aboutUs extends React.Component {
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </Card.Text>
+                    <div>
+                    <a href="https://www.linkedin.com/in/naeem-abdulhamid-alomari-4b902a170/">
+                      <Image
+                        src={Linkedin}
+                        className="linkedInIcon"
+                        style={{ width: "2rem" }}
+                        target='_blank'
+                      />
+                    </a>
+
+                    <a href="https://github.com/naeemalomari">
+                      <Image
+                        src={Github}
+                        className="GithubIcon"
+                        style={{ width: "2rem" }}
+                      />
+                    </a>
+
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
               <Col className="p-2 justify-content-center d-flex">
-                <Card style={{ width: "18rem" }}>
+                <Card border="primary" style={{ width: "18rem" }}>
                   <Card.Img variant="top" src={Alaa} />
                   <Card.Body>
                     <Card.Title className="text-dark">Alaa Baroud</Card.Title>
@@ -101,12 +120,31 @@ class aboutUs extends React.Component {
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </Card.Text>
+                    <div>
+                    <a href="https://www.linkedin.com/in/alaa-baroud-125691178/">
+                      <Image
+                        src={Linkedin}
+                        className="linkedInIcon"
+                        style={{ width: "2rem" }}
+                        target='_blank'
+                      />
+                    </a>
+
+                    <a href="https://github.com/alaabaroud">
+                      <Image
+                        src={Github}
+                        className="GithubIcon"
+                        style={{ width: "2rem" }}
+                      />
+                    </a>
+
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
 
               <Col className="p-2 justify-content-center d-flex">
-                <Card style={{ width: "18rem" }}>
+                <Card border="primary" style={{ width: "18rem" }}>
                   <Card.Img variant="top" src={Khaled} />
                   <Card.Body>
                     <Card.Title className="text-dark">Khaled Alqrainy</Card.Title>
@@ -117,10 +155,32 @@ class aboutUs extends React.Component {
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </Card.Text>
+                    <div>
+                    <a href="https://www.linkedin.com/in/khaled-alqrainy/">
+                      <Image
+                        src={Linkedin}
+                        className="linkedInIcon"
+                        style={{ width: "2rem" }}
+                        target='_blank'
+                      />
+                    </a>
+
+                    <a href="https://github.com/KhaledAlqrainy">
+                      <Image
+                        src={Github}
+                        className="GithubIcon"
+                        style={{ width: "2rem" }}
+                      />
+                    </a>
+
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
             </Row>
+          </Row>
+          <Row className="text-center mb-5">
+              <h3> Thank You For Visiting Our Site </h3>
           </Row>
 
           {/* ////////////////////////////////////// */}
