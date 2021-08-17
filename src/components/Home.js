@@ -12,6 +12,7 @@ import hair from '../assets/mahdi-bafande-59zCZ2pVC9Y-unsplash.jpg'
 import jajeh from '../assets/jesse-schoff-qVneOrTN06c-unsplash.jpg'
 import Blogs from './Blogs';
 import BlogCards from "./BlogCards";
+import InfoForm from "./InfoForm";
 
 
 class Home extends React.Component {
@@ -151,7 +152,12 @@ class Home extends React.Component {
           <Row>
             <BlogCards />
           </Row>
+
+          <Row>
+            <InfoForm/>
+          </Row>
         </Container>
+
 
   
       </>
