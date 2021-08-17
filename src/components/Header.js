@@ -10,7 +10,7 @@ class Header extends React.Component {
     const { user, isAuthenticated } = this.props.auth0;
 
     return (
-      <Container>
+      <Container fluid >
         <Row>
           <Navbar bg="dark" variant="dark" className="py-2">
             <Navbar.Brand href="/" className="ml-2">
