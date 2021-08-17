@@ -116,7 +116,6 @@ class Login extends Component {
                   >
                     <h4 className="text-dark">Don't have an account ?</h4>
                     <LoginButton />
-                    <LogoutButton />
                   </Form.Group>
                 </Form>
               </Col>

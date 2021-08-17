@@ -1,10 +1,9 @@
 import React from "react";
 import { withAuth0 } from "@auth0/auth0-react";
-import { Navbar, Container, Nav, NavDropdown, Col, Row } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import imgLogo from "../assets/logoRightText-01.png";
 import LogoutButton from "./Logout";
-import Login from "./Login";
 
 class Header extends React.Component {
   render() {
