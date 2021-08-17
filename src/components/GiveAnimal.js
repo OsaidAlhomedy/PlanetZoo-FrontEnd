@@ -12,11 +12,15 @@ import { withAuth0 } from "@auth0/auth0-react";
 import GivenPetCard from "./GivenPetCard";
 import "./GiveAnimal.css";
 
+import AnimalUpdateModal from "./AnimalUpdateModal";
+
+
 class GiveAnimal extends Component {
   constructor(props) {
     super(props);
     this.state = {
       imageUrl: "",
+      updateModalShow: false,
     };
   }
 
@@ -118,6 +122,50 @@ class GiveAnimal extends Component {
     this.getAnimals();
   };
 
+  updateAnimalFormShow = (name, type, breed, age, description, id) => {
+    this.setState({
+      previousData: {
+        name: name,
+        type: type,
+        breed: breed,
+        age: age,
+        description: description,
+        id: id,
+      },
+      updateModalShow: true,
+    });
+  };
+
+  updateAnimalFormHide = () => {
+    this.setState({
+      updateModalShow: false,
+    });
+  };
+
+  updateAnimal = async (event) => {
+    event.preventDefault();
+    const idNum = this.state.previousData.id;
+    const petData = {
+      petName: event.target.petName.value,
+      petType: event.target.petType.value,
+      petBreed: event.target.petBreed.value,
+      petAge: event.target.petAge.value,
+      petDesc: event.target.petDesc.value,
+    };
+
+    await axios
+      .put(`${process.env.REACT_APP_SERVER}/updateAnimal/${idNum}`, petData)
+      .then((result) => {
+        this.setState({
+          petData: result.data,
+        });
+        this.getAnimals();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   render() {
     return (
       <Container className="border">
@@ -140,24 +188,27 @@ class GiveAnimal extends Component {
         </Row>
 
         <Row className="cardContainer mb-4 bg-light py-5">
-            {this.state.petData ? (
-              this.state.petData.map((animal) => (
-                <GivenPetCard
-                  name={animal.name}
-                  type={animal.type}
-                  breed={animal.breed}
-                  age={animal.age}
-                  img={animal.img}
-                  description={animal.description}
-                  adoptionStatus={animal.adoptionStatus}
-                  givenBy={animal.givenBy}
-                  deletePet={this.deleteAnimal}
-                  id={animal._id}
-                />
-              ))
-            ) : (
-              <p></p>
-            )}
+
+          {this.state.petData ? (
+            this.state.petData.map((animal) => (
+              <GivenPetCard
+                name={animal.name}
+                type={animal.type}
+                breed={animal.breed}
+                age={animal.age}
+                img={animal.img}
+                description={animal.description}
+                adoptionStatus={animal.adoptionStatus}
+                givenBy={animal.givenBy}
+                deletePet={this.deleteAnimal}
+                id={animal._id}
+                updateAnimalFormShow={this.updateAnimalFormShow}
+              />
+            ))
+          ) : (
+            <p></p>
+          )}
+          
         </Row>
 
         <Row className="justify-content-center">
@@ -248,6 +299,16 @@ class GiveAnimal extends Component {
             </Form>
           </Col>
         </Row>
+
+        {this.state.previousData && (
+          <AnimalUpdateModal
+            updateModalShow={this.state.updateModalShow}
+            updateAnimalFormHide={this.updateAnimalFormHide}
+            previousData={this.state.previousData}
+            updateAnimal={this.updateAnimal}
+          />
+        )}
+
       </Container>
     );
   }

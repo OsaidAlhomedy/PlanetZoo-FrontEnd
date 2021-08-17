@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
 
-class GivenPetCard extends Component {
+class AdoptionAnimalCard extends Component {
   render() {
     return (
       <Col className="d-flex justify-content-center">
@@ -26,44 +26,19 @@ class GivenPetCard extends Component {
               </Row>
 
               <Row>
-
-                <article className="text-justify">
-                  {this.props.description}
-                </article>
-
+                <article className="text-justify">{this.props.article}</article>
               </Row>
             </Card.Text>
           </Card.Body>
 
           <Card.Body>
             <Row>
-              <Col md={8}>
                 <Button
-                  variant="danger"
+                  variant="success"
                   onClick={() => this.props.deletePet(this.props.id)}
                 >
-                  Changed my mind
+                  Adopt
                 </Button>
-              </Col>
-              <Col md={4}>
-                <Button
-                  variant="warning"
-
-                  onClick={() =>
-                    this.props.updateAnimalFormShow(
-                      this.props.name,
-                      this.props.type,
-                      this.props.breed,
-                      this.props.age,
-                      this.props.description,
-                      this.props.id
-                    )
-                  }
-
-                >
-                  Update
-                </Button>
-              </Col>
             </Row>
           </Card.Body>
         </Card>
@@ -72,4 +47,4 @@ class GivenPetCard extends Component {
   }
 }
 
-export default GivenPetCard;
+export default AdoptionAnimalCard;
