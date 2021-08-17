@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Form,
   Button,
-  Card,
   Container,
   Row,
   Col,
@@ -16,22 +15,27 @@ class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      blogs: [],
       imageUrl: "",
     };
   }
 
   getArticles = async () => {
     const url = `${process.env.REACT_APP_SERVER}/blog`;
-    axios.get(url).then((result) => {
-      this.setState({
-        blogsData: result.data,
+    axios
+      .get(url)
+      .then((result) => {
+        this.setState({
+          blogsData: result.data,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    });
   };
 
   componentDidMount() {
     this.getArticles();
+    console.log("Hello");
   }
 
   addBlog = (event) => {
@@ -53,17 +57,12 @@ class Blog extends React.Component {
         this.setState({
           blogsData: result.data,
         });
+        this.getArticles();
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
-  // componentDidUpdate(prevState) {
-  //   if (this.state.blogsData !== prevState.blogData) {
-  //     this.getArticles();
-  //   }
-  // }
 
   fileHandler = async (e) => {
     console.log(e.target.files[0]);
@@ -125,7 +124,7 @@ class Blog extends React.Component {
 
         <Row className="bg-light py-5">
           <Form onSubmit={(event) => this.addBlog(event)}>
-            <Form.Group className="mb-5">
+            <Form.Group className="mb-5" id="formMaybe">
               <h2 className="text-center">
                 Want to contribute ? , Write your article here and leave the
                 rest to us

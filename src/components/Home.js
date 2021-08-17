@@ -4,7 +4,6 @@ import { Card, CardGroup, Button, Container, Row, Col, Article } from 'react-boo
 import '../Test.css'
 import { Route } from 'react-router-dom'
 import axios from 'axios';
-
 import huski from '../assets/jesse-schoff-i2DefZ6PCN0-unsplash.jpg'
 import snjab from '../assets/david-solce-PhOAIvz3fBA-unsplash.jpg'
 import abusha3ar from '../assets/don-hassan-HZjI3mXpFXA-unsplash.jpg'
@@ -16,14 +15,13 @@ import BlogCards from "./BlogCards";
 
 
 
-
-
 class Home extends React.Component {
 
 
   render() {
     return (
       <>
+
         <Container className='border '>
           <Row>
             <Carousel bg="dark" variant="" className="d-block,w-100,h-20">
@@ -157,15 +155,7 @@ class Home extends React.Component {
           </Row>
         </Container>
 
-
-
-
-
-        {/* ///////////////////////////////////////////////CARDS//////////////////////////////////////////////////////// */}
-
-
-
-
+  
       </>
     );
   }
