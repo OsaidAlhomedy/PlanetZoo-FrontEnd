@@ -16,8 +16,6 @@ import Adoption from "./components/Adoption";
 
 import Donate from "./components/Donate";
 
-
-
 class Test extends Component {
   render() {
     const { isLoading, error, isAuthenticated } = this.props.auth0;
@@ -44,18 +42,20 @@ class Test extends Component {
             <Profile />
           </Route>
           <Route exact path="/donation">
-            <Header/>
-            <Donate/>
-            <Footer/>
+            <Header />
+            <Donate />
+            <Footer />
           </Route>
           <Route exact path="/login">
             <Login />
           </Route>
 
           <Route exact path="/adoption">
+            <Header />
             <Adoption />
+            <Footer />
           </Route>
-      
+
           <Route exact path="/giveAnimals">
             <Header />
             <GiveAnimal />

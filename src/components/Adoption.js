@@ -12,12 +12,14 @@ import { withAuth0 } from "@auth0/auth0-react";
 import GivenPetCard from "./GivenPetCard";
 import "./GiveAnimal.css";
 import AdoptionAnimalCard from "./AdoptionAnimalCard";
+import { Helmet } from "react-helmet";
 
 class Adoption extends Component {
   constructor(props) {
     super(props);
     this.state = {
       imageUrl: "",
+      filteredData: null,
     };
   }
 
@@ -31,7 +33,6 @@ class Adoption extends Component {
         this.setState({
           petData: result.data,
         });
-        console.log(this.state.petData);
       })
       .catch((err) => {
         console.log(err);
@@ -42,20 +43,22 @@ class Adoption extends Component {
     this.getAnimals();
   };
 
-  updateAnimal = async (event) => {
+  animalFilter = async (event) => {
     event.preventDefault();
-    const { user } = this.props.auth0;
-    const petImg = this.state.imageUrl;
-    await axios
-      .put(`${process.env.REACT_APP_SERVER}/addAnimal`)
-      .then((result) => {
-        this.setState({
-          petData: result.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    const newArr = await this.state.petData.filter((item) => {
+      if (
+        item.type == event.target.petType.value &&
+        item.age == event.target.petAge.value &&
+        item.adoptionStatus.toString() == event.target.petStatus.value
+      )
+        return item;
+    });
+    this.setState({
+      petData: newArr,
+    });
+  };
+
+  clearFilter = () => {
     this.getAnimals();
   };
 
@@ -81,22 +84,33 @@ class Adoption extends Component {
 
         <Row className="justify-content-center mb-5">
           <Col>
-            <Form>
+            <Form onSubmit={(event) => this.animalFilter(event)}>
               <Row>
-                <Col className="d-flex align-items-center justify-content-center">
-                  <h4 className="text-center">Filtration</h4>
+                <Col className="">
+                  <Row>
+                    <h4 className="text-center">Filtration</h4>
+                  </Row>
+                  <Row md={2}>
+                    <Button variant="primary" type="submit">
+                      Submit
+                    </Button>
+                    <Button variant="danger" onClick={this.clearFilter}>
+                      Clear
+                    </Button>
+                  </Row>
                 </Col>
                 <Col>
-                  <Form.Label>Pet Type:</Form.Label>
-                  <Form.Select name="petType">
-                    <option value="cat">Cat</option>
-                    <option value="dog">Dog</option>
-                    <option value="bird">Bird</option>
-                  </Form.Select>
+                  <Form.Label>Pet Type</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="petType"
+                    placeHolder="cat , dog , bird ..."
+                  />
                 </Col>
                 <Col>
-                  <Form.Label>Pet Age:</Form.Label>
+                  <Form.Label>Pet Age</Form.Label>
                   <Form.Select name="petAge">
+                    <option value="All">All</option>
                     <option value="Younger than 1 year">
                       Younger than 1 year
                     </option>
@@ -109,8 +123,9 @@ class Adoption extends Component {
                   </Form.Select>
                 </Col>
                 <Col>
-                  <Form.Label>Pet Availability :</Form.Label>
+                  <Form.Label>Pet Availability</Form.Label>
                   <Form.Select name="petStatus">
+                    <option value="All">All</option>
                     <option value="false">Available for adoption</option>
                     <option value="true">Adopted</option>
                   </Form.Select>
