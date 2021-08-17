@@ -13,6 +13,7 @@ import jajeh from '../assets/jesse-schoff-qVneOrTN06c-unsplash.jpg'
 import Blogs from './Blogs';
 import BlogCards from "./BlogCards";
 import InfoForm from "./InfoForm";
+import Autofill from "./Autofill";
 
 
 class Home extends React.Component {
@@ -23,22 +24,7 @@ class Home extends React.Component {
     }
   }
 
-  getCompanyData = async () => {
 
-    let URL = `http://localhost:3010/company`;
-    axios
-      .get(URL)
-      .then(result => {
-        console.log(result.data)
-
-
-      })
-
-      .catch(err => {
-        console.log(err);
-      })
-
-  }
 
   render() {
     return (
@@ -226,15 +212,11 @@ class Home extends React.Component {
           </Col>
         </Row>
                
-                <Form>
-          <Form.Group className="mb-3" controlId="">
-            <Form.Label> Check if your company make tests on animals </Form.Label>
-            <Form.Control type="text" placeholder=" ENTER Company Name " />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          </Form.Group>
-          <Button variant="success" type="submit"> Submit</Button>
-        </Form>
+          <Row>
+            <Autofill />
+          </Row>
+
+
 
 
 
