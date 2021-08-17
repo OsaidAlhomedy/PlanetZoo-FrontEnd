@@ -5,7 +5,7 @@ class GivenPetCard extends Component {
   render() {
     return (
       <Col className="d-flex justify-content-center">
-        <Card style={{ width: "22rem" }}>
+        <Card className="m-3" style={{ width: "22rem" }}>
           <Card.Img variant="top" src={this.props.img} alt="pet image" />
           <Card.Body>
             <Card.Title className="mb-1">
@@ -26,29 +26,23 @@ class GivenPetCard extends Component {
               </Row>
 
               <Row>
-
                 <article className="text-justify">
                   {this.props.description}
                 </article>
-
               </Row>
             </Card.Text>
           </Card.Body>
-
-          <Card.Body>
-            <Row>
-              <Col md={8}>
+            <Card.Footer>
+              <Row>
                 <Button
                   variant="danger"
                   onClick={() => this.props.deletePet(this.props.id)}
                 >
                   Changed my mind
                 </Button>
-              </Col>
-              <Col md={4}>
+
                 <Button
                   variant="warning"
-
                   onClick={() =>
                     this.props.updateAnimalFormShow(
                       this.props.name,
@@ -59,13 +53,11 @@ class GivenPetCard extends Component {
                       this.props.id
                     )
                   }
-
                 >
                   Update
                 </Button>
-              </Col>
-            </Row>
-          </Card.Body>
+              </Row>
+            </Card.Footer>
         </Card>
       </Col>
     );
