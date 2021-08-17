@@ -1,161 +1,161 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
-import { Card, CardGroup, Button } from "react-bootstrap";
-import "../Test.css";
-import ghazal from "../assets/7b8d864e41342a71212d90f4294ea069.jpg";
-import banda from "../assets/banda.jpg";
-import tigers from "../assets/tigers.jpg";
-import bird from "../assets/bird.jpg";
-import horseimg from "../assets/depositphotos_21193779-stock-photo-gray-arabian-horse-gallops-on.jpg";
-// import Doncky from "";
-import { Route } from "react-router-dom";
-import Rooster from "../assets/rooster.jpg";
-import chrochodile from "../assets/chrochodile.jpg";
+import Carousel from 'react-bootstrap/Carousel'
+import { Card, CardGroup, Button, Container, Row, Col, Article } from 'react-bootstrap'
+import '../Test.css'
+import { Route } from 'react-router-dom'
+import axios from 'axios';
+import huski from '../assets/jesse-schoff-i2DefZ6PCN0-unsplash.jpg'
+import snjab from '../assets/david-solce-PhOAIvz3fBA-unsplash.jpg'
+import abusha3ar from '../assets/don-hassan-HZjI3mXpFXA-unsplash.jpg'
+import Bird from '../assets/طائر-الكوكتيل-825x510.jpg'
+import hair from '../assets/mahdi-bafande-59zCZ2pVC9Y-unsplash.jpg'
+import jajeh from '../assets/jesse-schoff-qVneOrTN06c-unsplash.jpg'
+import Blogs from './Blogs';
+import BlogCards from "./BlogCards";
+
+
 
 class Home extends React.Component {
+
+
   render() {
     return (
       <>
-        <Carousel>
-          <Carousel.Item>
-            <img className="d-block w-100" src={tigers} alt="Third slide" />
 
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={ghazal}
-              alt="First slide"
-              width="50"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
+        <Container className='border '>
+          <Row>
+            <Carousel bg="dark" variant="" className="d-block,w-100,h-20">
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 h-20"
+                  src={huski}
+                  alt="Third slide"
+                />
+                <Carousel.Caption className='mb-5'>
+                  <h3> “Dogs are our link to paradise. They don’t know jealousy or discontent.” </h3>
+                  <p> Milan Kundera </p>
+                  <Route render={({ history }) => (
+                    <Button className='buttons'
+                      type='button'
+                      onClick={() => { history.push('/Adoption') }}
+                    >
+                      Adopt an Animal 😸
+                    </Button>
+                  )} />
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 h-20"
+                  src={snjab}
+                  alt="First slide"
 
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bird}
-              alt="First slide"
-              width="50"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
+                />
+                <Carousel.Caption className='mb-5'>
+                  <h3>“Animals are such agreeable friends—they ask no questions; they pass no criticisms.” </h3>
+                  <p> George Eliot</p>
+                  <Route render={({ history }) => (
+                    <Button className='buttons'
+                      type='button'
+                      onClick={() => { history.push('/Adoption') }}
+                    >
+                      Adopt an Animal 😸
+                    </Button>
+                  )} />
+                </Carousel.Caption >
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 h-20"
+                  src={abusha3ar}
+                  alt="First slide"
+                />
+                <Carousel.Caption className='mb-5'>
+                  <h3>“One small cat changes coming home to an empty house to coming home.” </h3>
+                  <p> Pam Brown </p>
+                  <Route render={({ history }) => (
+                    <Button className='buttons'
+                      type='button'
+                      onClick={() => { history.push('/Adoption') }}
+                    >
+                      Adopt an Animal  😸
+                    </Button>
+                  )} />
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item >
+                <img
+                  className="d-block w-100 h-20 "
+                  src={Bird}
+                  alt="First slide"
+                />
+                <Carousel.Caption className='mb-5'>
+                  <h3>“It is not only fine feathers that make fine birds.” </h3>
+                  <p> Aesop </p>
+                  <Route render={({ history }) => (
+                    <Button className='buttons'
+                      type='button'
+                      onClick={() => { history.push('/Adoption') }}
+                    >
+                      Adopt an Animal  😸
+                    </Button>
+                  )} />
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 h-20"
+                  src={hair}
+                  alt="Second slide"
+                />
+                <Carousel.Caption className='mb-5'>
+                  <h3>“A dog is the only thing on earth that loves you more than you love yourself.” </h3>
+                  <p>Josh Billings</p>
 
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={horseimg}
-              alt="First slide"
-              width="50"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
+                  <Route render={({ history }) => (
+                    <Button className='buttons'
+                      type='button'
+                      onClick={() => { history.push('/Adoption') }}
+                    >
+                      Adopt an Animal  😸
+                    </Button>
+                  )} />
+                </Carousel.Caption>
 
-          <Carousel.Item>
-            <img className="d-block w-100" src={banda} alt="Second slide" />
 
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+              </Carousel.Item>
 
-        <CardGroup>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="http://images6.fanpop.com/image/photos/35000000/Jaffa-my-donkey-cute-donkeys-35006721-427-640.jpg"
-            />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 h-20"
+                  src={jajeh}
+                  alt="Second slide"
+                />
+                <Carousel.Caption className="mb-5">
+                  <h3>“Animals are my friends, and I don’t eat my friends.”</h3>
+                  <p> George Bernard Shaw</p>
+                  <Route render={({ history }) => (
+                    <Button className='buttons'
+                      type='button'
+                      onClick={() => { history.push('/blog') }}
+                    >
+                      Adopt an Animal  😸
+                    </Button>
+                  )} />
+                </Carousel.Caption>
 
-              <Route
-                render={({ history }) => (
-                  <Button
-                    class="buttons"
-                    type="button"
-                    onClick={() => {
-                      history.push("/blog#formMaybe");
-                    }}
-                  >
-                    Read more!
-                  </Button>
-                )}
-              />
-            </Card.Body>
-            <Card.Footer></Card.Footer>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src={Rooster} />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
-              </Card.Text>
-              <Route
-                render={({ history }) => (
-                  <Button
-                    class="buttons"
-                    type="button"
-                    onClick={() => {
-                      history.push("/blog");
-                    }}
-                  >
-                    Read more!
-                  </Button>
-                )}
-              />
-            </Card.Body>
-            <Card.Footer></Card.Footer>
-          </Card>
-          <Card>
-            <Card.Img variant="top" src={chrochodile} />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
-              </Card.Text>
-              <Route
-                render={({ history }) => (
-                  <Button
-                    class="buttons"
-                    type="button"
-                    onClick={() => {
-                      history.push(`/blog`);
-                    }}
-                  >
-                    Read more!
-                  </Button>
-                )}
-              />
-            </Card.Body>
-            <Card.Footer></Card.Footer>
-          </Card>
-        </CardGroup>
+
+              </Carousel.Item>
+
+
+            </Carousel>
+          </Row>
+          <Row>
+            <BlogCards />
+          </Row>
+        </Container>
+
+  
       </>
     );
   }
