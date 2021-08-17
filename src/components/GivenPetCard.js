@@ -5,6 +5,13 @@ class GivenPetCard extends Component {
   render() {
     return (
       <Col className="d-flex justify-content-center">
+        {this.props.adoptionStatus && (
+          <div className="adoptedCard">
+            Adopted
+            <p>By: {this.props.adoptedBy}</p>
+            😻
+          </div>
+        )}
         <Card className="m-3" style={{ width: "22rem" }}>
           <Card.Img variant="top" src={this.props.img} alt="pet image" />
           <Card.Body>
@@ -32,32 +39,63 @@ class GivenPetCard extends Component {
               </Row>
             </Card.Text>
           </Card.Body>
-            <Card.Footer>
-              <Row>
-                <Button
-                  variant="danger"
-                  onClick={() => this.props.deletePet(this.props.id)}
-                >
-                  Changed my mind
-                </Button>
+          <Card.Footer>
+            <Row>
+              {!this.props.adoptionStatus ? (
+                <>
+                  <Button
+                    variant="danger"
+                    onClick={() => this.props.deletePet(this.props.id)}
+                  >
+                    Changed my mind
+                  </Button>
 
-                <Button
-                  variant="warning"
-                  onClick={() =>
-                    this.props.updateAnimalFormShow(
-                      this.props.name,
-                      this.props.type,
-                      this.props.breed,
-                      this.props.age,
-                      this.props.description,
-                      this.props.id
-                    )
-                  }
-                >
-                  Update
-                </Button>
-              </Row>
-            </Card.Footer>
+                  <Button
+                    variant="warning"
+                    onClick={() =>
+                      this.props.updateAnimalFormShow(
+                        this.props.name,
+                        this.props.type,
+                        this.props.breed,
+                        this.props.age,
+                        this.props.description,
+                        this.props.id
+                      )
+                    }
+                  >
+                    Update
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    variant="danger"
+                    disabled
+                    onClick={() => this.props.deletePet(this.props.id)}
+                  >
+                    Changed my mind
+                  </Button>
+
+                  <Button
+                    variant="warning"
+                    disabled
+                    onClick={() =>
+                      this.props.updateAnimalFormShow(
+                        this.props.name,
+                        this.props.type,
+                        this.props.breed,
+                        this.props.age,
+                        this.props.description,
+                        this.props.id
+                      )
+                    }
+                  >
+                    Update
+                  </Button>
+                </>
+              )}
+            </Row>
+          </Card.Footer>
         </Card>
       </Col>
     );

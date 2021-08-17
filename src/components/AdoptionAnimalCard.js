@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class AdoptionAnimalCard extends Component {
   render() {
     return (
-      <Col className="d-flex">
+      <Col className="d-flex justify-content-center">
         {this.props.adoptionStatus && (
           <div className="adoptedCard">
             Adopted
