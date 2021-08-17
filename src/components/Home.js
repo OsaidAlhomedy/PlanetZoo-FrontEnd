@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-=======
-
->>>>>>> 305ed3dfac477d994e72e310e1d7f1307635401b
 import Carousel from 'react-bootstrap/Carousel'
 import { Card, CardGroup, Button, Container, Row, Col, Article } from 'react-bootstrap'
 import '../Test.css'
