@@ -8,11 +8,11 @@ export class Donate extends Component {
     return (
 
       <Container className='border'>
-        <Row className = "text-center mt-5">
+        <Row className = "text-center mt-2">
 
-          <h1 > Donation page </h1>
+          {/* <h1 > Donation page </h1> */}
 
-<p className ='paragraph'> A donor service representative with the American Society for the Prevention of Cruelty to Animals, or ASPCA, said 80 percent of donations goes directly to help animals. Help us to stop Animal's Suffering and Donate Here: </p>
+{/* <p className ='paragraph'> A donor service representative with the American Society for the Prevention of Cruelty to Animals, or ASPCA, said 80 percent of donations goes directly to help animals. Help us to stop Animal's Suffering and Donate Here: </p> */}
 
 <Image src={DonatePic} alt='poster' fluid/>
 
