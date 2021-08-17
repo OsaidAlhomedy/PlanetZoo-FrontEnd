@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Form,
-  Button,
-  Card,
-  Container,
-  Row,
-  Col,
-  Image,
-} from "react-bootstrap";
+import { Container, Row, Image } from "react-bootstrap";
 
 class Article extends Component {
   render() {
