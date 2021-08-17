@@ -4,8 +4,8 @@ import { Button, Card, Row, Col } from "react-bootstrap";
 class AdoptionAnimalCard extends Component {
   render() {
     return (
-      <Col className="d-flex justify-content-center">
-        <Card style={{ width: "22rem" }}>
+      <Col className="d-flex">
+        <Card className="m-3" style={{ width: "22rem" }}>
           <Card.Img variant="top" src={this.props.img} alt="pet image" />
           <Card.Body>
             <Card.Title className="mb-1">
@@ -31,16 +31,18 @@ class AdoptionAnimalCard extends Component {
             </Card.Text>
           </Card.Body>
 
-          <Card.Body>
+          <Card.Footer>
             <Row>
-                <Button
-                  variant="success"
-                  onClick={() => this.props.deletePet(this.props.id)}
-                >
-                  Adopt
-                </Button>
+              <Button
+                variant="success"
+                onClick={() =>
+                  this.props.adoptAnimal(this.props.id, this.props.adoptName)
+                }
+              >
+                Adopt
+              </Button>
             </Row>
-          </Card.Body>
+          </Card.Footer>
         </Card>
       </Col>
     );

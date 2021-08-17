@@ -33,6 +33,7 @@ class Adoption extends Component {
         this.setState({
           petData: result.data,
         });
+        console.log(result.data);
       })
       .catch((err) => {
         console.log(err);
@@ -62,7 +63,28 @@ class Adoption extends Component {
     this.getAnimals();
   };
 
+  adoptAnimal = async (id, adoptName) => {
+    const adoptData = {
+      adoptName: adoptName,
+    };
+    await axios
+      .put(
+        `${process.env.REACT_APP_SERVER}/updateAdoptedAnimal/${id}`,
+        adoptData
+      )
+      .then((result) => {
+        this.setState({
+          petData: result.data,
+        });
+        this.getAnimals();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   render() {
+    const { user } = this.props.auth0;
     return (
       <Container className="border">
         <Row className="text-center mb-5">
@@ -135,7 +157,7 @@ class Adoption extends Component {
           </Col>
         </Row>
 
-        <Row className="cardContainer mb-4 bg-light py-5">
+        <Row className="mb-4 bg-light py-5">
           {this.state.petData ? (
             this.state.petData.map((animal) => (
               <AdoptionAnimalCard
@@ -149,6 +171,9 @@ class Adoption extends Component {
                 givenBy={animal.givenBy}
                 deletePet={this.deleteAnimal}
                 id={animal._id}
+                adoptName={user.name}
+                adoptAnimal={this.adoptAnimal}
+                adoptedBy = {animal.adoptedBy}
               />
             ))
           ) : (
