@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
-import { Card, CardGroup, Button, Container, Row, Col, Article } from 'react-bootstrap'
+import { Card, CardGroup, Button, Container, Row, Col, Form } from 'react-bootstrap'
 import '../Test.css'
 import { Route } from 'react-router-dom'
 import axios from 'axios';
@@ -16,7 +16,29 @@ import InfoForm from "./InfoForm";
 
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      companyName: [],
+    }
+  }
 
+  getCompanyData = async () => {
+
+    let URL = `http://localhost:3010/company`;
+    axios
+      .get(URL)
+      .then(result => {
+        console.log(result.data)
+
+
+      })
+
+      .catch(err => {
+        console.log(err);
+      })
+
+  }
 
   render() {
     return (
@@ -154,12 +176,19 @@ class Home extends React.Component {
           </Row>
 
           <Row>
-            <InfoForm/>
+            <InfoForm />
           </Row>
         </Container>
 
-
-  
+        <Form>
+          <Form.Group className="mb-3" controlId="">
+            <Form.Label> Check if your company make tests on animals </Form.Label>
+            <Form.Control type="text" placeholder=" ENTER Company Name " />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          </Form.Group>
+          <Button variant="success" type="submit"> Submit</Button>
+        </Form>
       </>
     );
   }
