@@ -11,7 +11,9 @@ import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import GivenPetCard from "./GivenPetCard";
 import "./GiveAnimal.css";
+
 import AnimalUpdateModal from "./AnimalUpdateModal";
+
 
 class GiveAnimal extends Component {
   constructor(props) {
@@ -186,6 +188,7 @@ class GiveAnimal extends Component {
         </Row>
 
         <Row className="cardContainer mb-4 bg-light py-5">
+
           {this.state.petData ? (
             this.state.petData.map((animal) => (
               <GivenPetCard
@@ -205,6 +208,7 @@ class GiveAnimal extends Component {
           ) : (
             <p></p>
           )}
+          
         </Row>
 
         <Row className="justify-content-center">
@@ -295,6 +299,7 @@ class GiveAnimal extends Component {
             </Form>
           </Col>
         </Row>
+
         {this.state.previousData && (
           <AnimalUpdateModal
             updateModalShow={this.state.updateModalShow}
@@ -303,6 +308,7 @@ class GiveAnimal extends Component {
             updateAnimal={this.updateAnimal}
           />
         )}
+
       </Container>
     );
   }

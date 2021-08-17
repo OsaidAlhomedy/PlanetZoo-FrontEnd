@@ -26,9 +26,11 @@ class GivenPetCard extends Component {
               </Row>
 
               <Row>
+
                 <article className="text-justify">
                   {this.props.description}
                 </article>
+
               </Row>
             </Card.Text>
           </Card.Body>
@@ -46,6 +48,7 @@ class GivenPetCard extends Component {
               <Col md={4}>
                 <Button
                   variant="warning"
+
                   onClick={() =>
                     this.props.updateAnimalFormShow(
                       this.props.name,
@@ -56,6 +59,7 @@ class GivenPetCard extends Component {
                       this.props.id
                     )
                   }
+
                 >
                   Update
                 </Button>
