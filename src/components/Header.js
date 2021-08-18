@@ -11,12 +11,15 @@ class Header extends React.Component {
     const { user, isAuthenticated } = this.props.auth0;
 
     return (
+
       <Container fluid>
+
         <Row>
           <Navbar bg="dark" variant="dark" className="py-2">
             <Navbar.Brand href="/" className="ml-4">
               <img alt="logo" src={imgLogo} width="250px" />
             </Navbar.Brand>
+
             <Nav>
               <Nav.Link className="h4" href="/">
                 {" "}
@@ -25,6 +28,7 @@ class Header extends React.Component {
               <Nav.Link className="h4" href="blog">
                 Blog
               </Nav.Link>
+
               {isAuthenticated ? (
                 <NavDropdown
                   className="h4"
@@ -45,6 +49,7 @@ class Header extends React.Component {
                 ""
               )}
             </Nav>
+
             <Nav className="ms-auto align-items-center">
               {isAuthenticated ? (
                 <Nav.Link className="h4" href="profile">
@@ -65,6 +70,7 @@ class Header extends React.Component {
                   <LoginButton />
                 </Nav.Link>
               )}
+
             </Nav>
           </Navbar>
         </Row>
