@@ -158,7 +158,7 @@ class Home extends React.Component {
 
           </Carousel>
         </Row>
-        <Row>
+        <Row class="blogRow">
           <Col className="bg-secondary text-light text-center " md={4} >
 
             <pre className="h2">

@@ -47,7 +47,7 @@ function Autofill() {
         onChange={e => setText(e.target.value)} 
         />
       </Hint>
-      <Button onClick={condition} variant="info">Submit  </Button>
+      <Button onClick={condition()} variant="info">Submit </Button>
 
     </div>
   );
