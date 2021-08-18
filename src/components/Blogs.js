@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import Article from "./Article";
 import axios from "axios";
+import Reviews from "./Reviews";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -63,6 +64,7 @@ class Blog extends React.Component {
         console.log(err);
       });
   };
+  
 
   fileHandler = async (e) => {
     console.log(e.target.files[0]);
@@ -102,26 +104,33 @@ class Blog extends React.Component {
 
   render() {
     return (
-      <Container className="border">
-        <Row className="text-center py-5">
-          <h1>The Blog</h1>
-        </Row>
+      <Container>
+        <Row>
+          {/* <Col>
+            <h1>The Blog</h1>
+          </Col> */}
 
-        <Row className="mb-5 justify-content-center">
-          <Col md={10}>
-            {this.state.blogsData
-              ? this.state.blogsData.map((blog) => (
-                  <Article
-                    title={blog.title}
-                    headline={blog.headline}
-                    img={blog.img}
-                    article={blog.article}
-                  />
-                ))
-              : ""}
+          <Col>
+            <Col md={10}>
+              {this.state.blogsData
+                ? this.state.blogsData.map((blog) => (
+                    <Article
+                      title={blog.title}
+                      headline={blog.headline}
+                      img={blog.img}
+                      article={blog.article}
+                    />
+                  ))
+                : ""}
+            </Col>
           </Col>
+
+          <Col>
+          <Reviews />
+        </Col>
         </Row>
 
+        
         <Row className="bg-light py-5">
           <Form onSubmit={(event) => this.addBlog(event)}>
             <Form.Group className="mb-5" id="formMaybe">

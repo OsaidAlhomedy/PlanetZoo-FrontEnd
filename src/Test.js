@@ -13,7 +13,6 @@ import Home from "./components/Home";
 import GiveAnimal from "./components/GiveAnimal";
 import AboutUs from "./components/AboutUs"
 import Adoption from "./components/Adoption";
-
 import Donate from "./components/Donate";
 
 class Test extends Component {
@@ -36,6 +35,7 @@ class Test extends Component {
           <Route exact path="/blog">
             <Header />
             <Blog />
+            
             <Footer />
           </Route>
           <Route exact path="/profile">
