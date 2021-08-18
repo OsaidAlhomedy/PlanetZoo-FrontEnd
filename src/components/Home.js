@@ -26,6 +26,7 @@ import InfoForm from "./InfoForm";
 import Autofill from "./Autofill";
 import AboutUs from "./AboutUs";
 import RandomFactGen from "./RandomFactGen";
+import Sponsors from "./Sponsors";
 
 class Home extends React.Component {
   constructor(props) {
@@ -293,6 +294,20 @@ class Home extends React.Component {
           </Col>
           <Col>
             <AboutUs />
+          </Col>
+        </Row>
+
+        <Row className="h-50">
+          <Col>
+            <Row className="d-flex justify-content-center align-items-center border h-100">
+              <Sponsors />
+            </Row>
+          </Col>
+          <Col
+            className="d-flex bg-dark text-light text-center blogCol3 justify-content-center align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "120px" }}>THE{<br />}SPONSORS</h2>
           </Col>
         </Row>
       </>
