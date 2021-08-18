@@ -28,16 +28,13 @@ class BlogCards extends React.Component {
   }
   render() {
     return (
-      <>
-        <Container fluid >
-          <Row>
+          <Row className="d-flex justify-content-evenly">
             {this.state.blogs ? this.state.blogs.map((n, i) => {
               console.log(this.state.blogs);
               if (i < 3) {
                 return (
                   
-                  <Col >
-              
+                  <Col className="mx-5">
                     <Card bg="secondary" text="white"  style={{ width: '15rem' }}>
                       <Card.Img variant="top" src={n.img} />
                       <Card.Body>
@@ -54,8 +51,6 @@ class BlogCards extends React.Component {
               }
             }) : null}
           </Row>
-        </Container>
-      </>
     )
   }
 }
