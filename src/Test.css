@@ -108,12 +108,3 @@ html {
 .blogCol3 {
   font-family: "Anton", sans-serif !important;
 }
-
-.dividerRow2 {
-  background: url(./assets/joe-caione-qO-PIF84Vxg-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-clip: padding-box;
-  background-position: center;
-  background-size: cover;
-}

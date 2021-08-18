@@ -273,7 +273,7 @@ class Home extends React.Component {
           </Col>
 
           <Col
-            className="d-flex bg-dark py-5 text-light text-center blogCol2 justify-content-evenly align-items-center"
+            className="d-flex bg-dark py-5 text-light text-center blogCol3 justify-content-evenly align-items-center"
             md={4}
           >
             <h2 style={{ fontSize: "160px" }}>
@@ -287,7 +287,7 @@ class Home extends React.Component {
         {/* <Row className="dividerRow2 h-25"></Row> */}
         <Row className="">
           <Col
-            className="d-flex bg-dark text-light text-center blogCol justify-content-center align-items-center"
+            className="d-flex bg-dark text-light text-center blogCol3 justify-content-center align-items-center"
             md={4}
           >
             <h2 style={{ fontSize: "160px" }}>THE{<br />}TEAM</h2>
