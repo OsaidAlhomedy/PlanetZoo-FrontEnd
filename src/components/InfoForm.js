@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { Form, Button, Container, Row } from "react-bootstrap";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
 
 class InfoForm extends React.Component {
   constructor(props) {
@@ -44,33 +44,35 @@ class InfoForm extends React.Component {
 
   render() {
     return (
-      <>
-        <Container>
-          <Row>
-            <Form onSubmit={(event) => this.addFact(event)}>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control
-                  name="title"
-                  type="text"
-                  placeholder="Enter an Animal"
-                  size="lg"
-                />
-              </Form.Group>
-              <div className="d-grid gap-2">
-                <Button
-                  className="mb-3"
-                  variant="outline-success "
-                  size="lg"
-                  type="submit"
-                >
-                  Search
-                </Button>
-              </div>
-            </Form>
-            {this.collect() && <Row>{this.state.factData}</Row>}
+      <Col>
+        <Row>
+          <Form onSubmit={(event) => this.addFact(event)}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control
+                name="title"
+                type="text"
+                placeholder="Enter an Animal"
+                size="lg"
+              />
+            </Form.Group>
+            <div className="d-grid gap-2">
+              <Button
+                className="mb-3"
+                variant="outline-success "
+                size="lg"
+                type="submit"
+              >
+                Search
+              </Button>
+            </div>
+          </Form>
           </Row>
-        </Container>
-      </>
+          {this.collect() && (
+            <Row>
+              <Col>{this.state.factData}</Col>
+            </Row>
+          )}
+      </Col>
     );
   }
 }

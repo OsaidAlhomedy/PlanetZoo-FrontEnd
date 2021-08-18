@@ -25,6 +25,7 @@ import BlogCards from "./BlogCards";
 import InfoForm from "./InfoForm";
 import Autofill from "./Autofill";
 import AboutUs from "./AboutUs";
+import RandomFactGen from "./RandomFactGen";
 
 class Home extends React.Component {
   constructor(props) {
@@ -130,8 +131,12 @@ class Home extends React.Component {
                 alt="First slide"
               />
               <Carousel.Caption className="mb-5 heroCaption">
-                <h3>“It is not only fine feathers that make fine birds.” </h3>
-                <p> Aesop </p>
+                <h3>
+                  “When I look into the eyes of an animal, I do not see an
+                  animal.
+                  <br /> I see a living being. I see a friend. I feel a soul.”{" "}
+                </h3>
+                <p> Anthony Douglas Williams </p>
                 <Route
                   render={({ history }) => (
                     <Button
@@ -211,7 +216,7 @@ class Home extends React.Component {
 
         <Row className="rowBlog h-75">
           <Col
-            className="d-flex bg-success text-light text-center blogCol justify-content-center align-items-center"
+            className="d-flex bg-dark text-light text-center blogCol3 justify-content-center align-items-center"
             md={4}
           >
             <h2 style={{ fontSize: "160px" }}>The{<br />}Blog</h2>
@@ -221,40 +226,53 @@ class Home extends React.Component {
           </Col>
         </Row>
 
-        <Row className="dividerRow h-25"></Row>
+        {/* <Row className="dividerRow h-25"></Row> */}
 
-        <Row className="border ">
-          <Col md={8}>
-            <Row className="d-flex justify-content-center border h-75 pt-4">
-              <Col md={6}>
+        <Row className="">
+          <Col>
+            <Row className="d-flex justify-content-center h-100 border pt-4">
+              <Col md={10}>
                 <Row className="justify-content-center">
                   <h2 className="text-center">Search For An Animal!</h2>
-                  <p className="text-center">
+                  <h5 className="text-center">
                     You can use this tool to search for data about your favorite
                     animal or pet:
-                  </p>
+                  </h5>
                 </Row>
-                <InfoForm />
-              </Col>
-            </Row>
-            <Row className="border h-25">
-              <Col className="border pt-3">
-                <h2 className="text-center">
-                  {" "}
-                  Git Random Fact About Random Animal{" "}
-                </h2>
-              </Col>
-
-              <Col className="border pt-3">
-                <h2 className="text-center">Cruelty free checker </h2>
                 <Row>
-                  <Autofill />
+                  <InfoForm />
                 </Row>
               </Col>
             </Row>
           </Col>
+
+          <Col>
+            <Row className="d-flex justify-content-center h-50">
+              <Col className="border pt-4">
+                <h2 className="text-center">Cruelty Free Checker </h2>
+                <h5 className="text-center">
+                  Check if a compony tests their products on animals
+                </h5>
+                <Autofill />
+              </Col>
+            </Row>
+
+            <Row className="border h-50 pt-4">
+              <Col className="">
+                <h2 className="text-center">
+                  {" "}
+                  Git Random Fact About Random Animal{" "}
+                </h2>
+                <p className="h5 text-center">
+                  Click the card to get a random fact
+                </p>
+                <RandomFactGen />
+              </Col>
+            </Row>
+          </Col>
+
           <Col
-            className="d-flex bg-success py-5 text-light text-center blogCol justify-content-evenly align-items-center"
+            className="d-flex bg-dark py-5 text-light text-center blogCol2 justify-content-evenly align-items-center"
             md={4}
           >
             <h2 style={{ fontSize: "160px" }}>
@@ -265,12 +283,17 @@ class Home extends React.Component {
             </h2>
           </Col>
         </Row>
-
-        <Row>
-          <Row>
-            <h1 className="text-center mt-5">Meet Our Team</h1>
-          </Row>
-          <AboutUs />
+        {/* <Row className="dividerRow2 h-25"></Row> */}
+        <Row className="">
+          <Col
+            className="d-flex bg-dark text-light text-center blogCol justify-content-center align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "160px" }}>THE{<br />}TEAM</h2>
+          </Col>
+          <Col>
+            <AboutUs />
+          </Col>
         </Row>
       </>
     );

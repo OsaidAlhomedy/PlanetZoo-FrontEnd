@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Hint } from "react-autocomplete-hint";
-import { Button, Form, Col, Row } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Form, Col, Row, Image } from "react-bootstrap";
+import angryCat from "../assets/carAngry.png";
+import catConfused from "../assets/catConfused.png";
+import catHappy from "../assets/catHappy.png";
 
 function Autofill() {
   const [hintData, setHintData] = useState([]);
@@ -31,33 +33,49 @@ function Autofill() {
   }
 
   return (
-    <Col>
+    <Row className="">
       <Row>
-        <Col>
-          <h5>Enter The Company's Name</h5>
-          <Hint options={hintData} allowTabFill>
-            <input
-              className="input-with-hint"
-              name="khaled"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            />
-          </Hint>
-          <Button onClick={condition} variant="dark">
-            Submit{" "}
-          </Button>
-        </Col>
+        <Row className="my-3">
+          <Col className="d-flex justify-content-center">
+            <Hint options={hintData} allowTabFill>
+              <input
+                className="input-with-hint"
+                placeholder="Company Name"
+                value={text}
+                style={{ width: "30rem" }}
+                onChange={(e) => setText(e.target.value)}
+              />
+            </Hint>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col className="d-flex justify-content-center">
+            <Button onClick={condition} variant="dark">
+              Submit{" "}
+            </Button>
+          </Col>
+        </Row>
       </Row>
       <Row className="text-center">
         {company == true ? (
-          <h2>This Company Hates Animals</h2>
+          <Col>
+            <h2>This Company Hates Animals</h2>
+            <Image src={angryCat} style={{ width: "180px" }} />
+          </Col>
         ) : company == false ? (
-          <h2>This Company Supports Animals</h2>
+          <Col>
+            <h2>This Company Supports Animals</h2>
+            <Image src={catHappy} style={{ width: "120px" }} />
+          </Col>
         ) : (
-          <h2>No results found</h2>
+          <Col>
+            <h2>Waiting for search data</h2>
+            <Image src={catConfused} style={{ width: "200px" }} />
+          </Col>
         )}
       </Row>
-    </Col>
+    </Row>
   );
 }
 

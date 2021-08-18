@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
 html {
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 .loadingImg {
@@ -97,4 +97,23 @@ html {
 
 .blogCol {
   font-family: "Anton", sans-serif !important;
+  background-color: #4f98ca !important;
+}
+
+.blogCol2 {
+  font-family: "Anton", sans-serif !important;
+  background-color: #50d890 !important;
+}
+
+.blogCol3 {
+  font-family: "Anton", sans-serif !important;
+}
+
+.dividerRow2 {
+  background: url(./assets/joe-caione-qO-PIF84Vxg-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: padding-box;
+  background-position: center;
+  background-size: cover;
 }

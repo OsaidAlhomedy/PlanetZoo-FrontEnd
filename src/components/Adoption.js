@@ -9,10 +9,8 @@ import {
 } from "react-bootstrap";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
-import GivenPetCard from "./GivenPetCard";
 import "./GiveAnimal.css";
 import AdoptionAnimalCard from "./AdoptionAnimalCard";
-import { Helmet } from "react-helmet";
 
 class Adoption extends Component {
   constructor(props) {
@@ -24,9 +22,7 @@ class Adoption extends Component {
   }
 
   getAnimals = async () => {
-    const { user } = this.props.auth0;
-    const email = user.email;
-    const url = `${process.env.REACT_APP_SERVER}/getAnimal?email=${email}`;
+    const url = `${process.env.REACT_APP_SERVER}/getAnimalAdoption`;
     await axios
       .get(url)
       .then((result) => {
@@ -173,7 +169,7 @@ class Adoption extends Component {
                 id={animal._id}
                 adoptName={user.name}
                 adoptAnimal={this.adoptAnimal}
-                adoptedBy = {animal.adoptedBy}
+                adoptedBy={animal.adoptedBy}
               />
             ))
           ) : (

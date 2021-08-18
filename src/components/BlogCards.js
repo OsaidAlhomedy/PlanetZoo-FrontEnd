@@ -31,13 +31,13 @@ class BlogCards extends React.Component {
               if (i < 3) {
                 return (
                   <Col className="mx-4 d-flex">
-                    <Card style={{ width: "19rem" }}>
+                    <Card className="shadow" style={{ width: "20rem" }}>
                       <Card.Img variant="top" src={n.img} />
                       <Card.Body>
                         <Card.Title>{n.title}</Card.Title>
                         <Card.Text>
                           {n.article.slice(0, 165) + "...."}
-                          <a href="/adoption">Read More</a>
+                          <a href="/blog">Read More</a>
                         </Card.Text>
                       </Card.Body>
                       {/* <Card.Img variant="top" src={n.img} />
