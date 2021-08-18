@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import imgLogo from "../assets/logoRightText-01.png";
+import imgLogoBottom from "../assets/whiteLogo.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -17,10 +17,9 @@ class Footer extends React.Component {
     return (
       <footer className="bg-dark text-center text-white">
         <div className="text-center p-3">
-          <img alt="logo" src={imgLogo} width="300px" />
+          <img alt="logo" src={imgLogoBottom} width="200px" />
           <br></br>
           Contact Us at :<br></br>
-          {/* <a className="text-white" href="/aboutus">About Us</a> */}
           <a
             className="btn btn-outline-light btn-floating m-1"
             href="#!"

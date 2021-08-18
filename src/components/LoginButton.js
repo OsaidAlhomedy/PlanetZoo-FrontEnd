@@ -7,14 +7,14 @@ const LoginButton = () => {
 
   return (
     <Button
-      variant="link"
+      variant="success"
       onClick={() =>
         loginWithRedirect({
           screen_hint: "signup",
         })
       }
     >
-      Register & Authenticate Now
+      Log in
     </Button>
   );
 };

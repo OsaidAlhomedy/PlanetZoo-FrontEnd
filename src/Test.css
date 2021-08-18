@@ -39,15 +39,15 @@ h-20 {
   position: absolute;
   height: 22rem;
   width: 22rem;
-  margin-left:0.9%;
-  margin-top:0.8%;
+  margin-left: 0.9%;
+  margin-top: 0.8%;
   background-color: rgba(31, 31, 31, 0.644);
   z-index: 2;
   text-align: center;
-  font-size:5rem;
-  color:white;
+  font-size: 5rem;
+  color: white;
 }
 
 .adoptedCard p {
-  font-size:2rem;
+  font-size: 2rem;
 }
