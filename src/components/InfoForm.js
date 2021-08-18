@@ -57,15 +57,17 @@ class InfoForm extends React.Component {
                 />
               </Form.Group>
               <div className="d-grid gap-2">
-                <Button variant="outline-success " size="lg" type="submit">
+                <Button
+                  className="mb-3"
+                  variant="outline-success "
+                  size="lg"
+                  type="submit"
+                >
                   Search
                 </Button>
               </div>
             </Form>
-            <br></br>
-            {this.collect() && (
-              <Row class="infoStyle">{this.state.factData}</Row>
-            )}
+            {this.collect() && <Row>{this.state.factData}</Row>}
           </Row>
         </Container>
       </>

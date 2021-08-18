@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
+html {
+  overflow-x:hidden;
+}
 
 .loadingImg {
   margin-top: 200px;

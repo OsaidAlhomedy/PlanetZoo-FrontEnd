@@ -43,12 +43,12 @@ function Autofill() {
               onChange={(e) => setText(e.target.value)}
             />
           </Hint>
-          <Button onClick={condition} variant="info">
+          <Button onClick={condition} variant="dark">
             Submit{" "}
           </Button>
         </Col>
       </Row>
-      <Row>
+      <Row className="text-center">
         {company == true ? (
           <h2>This Company Hates Animals</h2>
         ) : company == false ? (

@@ -24,6 +24,7 @@ import Blogs from "./Blogs";
 import BlogCards from "./BlogCards";
 import InfoForm from "./InfoForm";
 import Autofill from "./Autofill";
+import AboutUs from "./AboutUs";
 
 class Home extends React.Component {
   constructor(props) {
@@ -224,10 +225,10 @@ class Home extends React.Component {
 
         <Row className="border ">
           <Col md={8}>
-            <Row className="d-flex justify-content-center border h-50 pt-4">
+            <Row className="d-flex justify-content-center border h-75 pt-4">
               <Col md={6}>
                 <Row className="justify-content-center">
-                  <h2 className="text-center">Search For An Animal !</h2>
+                  <h2 className="text-center">Search For An Animal!</h2>
                   <p className="text-center">
                     You can use this tool to search for data about your favorite
                     animal or pet:
@@ -236,15 +237,15 @@ class Home extends React.Component {
                 <InfoForm />
               </Col>
             </Row>
-            <Row className="border h-50">
-              <Col className="border pt-4">
+            <Row className="border h-25">
+              <Col className="border pt-3">
                 <h2 className="text-center">
                   {" "}
                   Git Random Fact About Random Animal{" "}
                 </h2>
               </Col>
 
-              <Col className="border pt-4">
+              <Col className="border pt-3">
                 <h2 className="text-center">Cruelty free checker </h2>
                 <Row>
                   <Autofill />
@@ -253,7 +254,7 @@ class Home extends React.Component {
             </Row>
           </Col>
           <Col
-            className="d-flex bg-success text-light text-center blogCol justify-content-evenly align-items-center"
+            className="d-flex bg-success py-5 text-light text-center blogCol justify-content-evenly align-items-center"
             md={4}
           >
             <h2 style={{ fontSize: "160px" }}>
@@ -263,6 +264,13 @@ class Home extends React.Component {
               M{<br />}O{<br />}R{<br />}E
             </h2>
           </Col>
+        </Row>
+
+        <Row>
+          <Row>
+            <h1 className="text-center mt-5">Meet Our Team</h1>
+          </Row>
+          <AboutUs />
         </Row>
       </>
     );
