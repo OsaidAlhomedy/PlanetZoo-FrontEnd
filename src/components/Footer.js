@@ -17,7 +17,9 @@ class Footer extends React.Component {
     return (
       <footer className="bg-dark text-center text-white">
         <div className="text-center p-3">
+
           <img alt="logo" src={imgLogoBottom} width="200px" />
+
           <br></br>
           Contact Us at :<br></br>
           <a

@@ -11,7 +11,7 @@ import Blog from "./components/Blogs";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
 import GiveAnimal from "./components/GiveAnimal";
-
+import AboutUs from "./components/AboutUs"
 import Adoption from "./components/Adoption";
 
 import Donate from "./components/Donate";
@@ -61,7 +61,11 @@ class Test extends Component {
             <GiveAnimal />
             <Footer />
           </Route>
-          <Route exact path="/aboutus"></Route>
+          <Route exact path="/aboutus">
+            <Header/>
+          <AboutUs/>
+          <Footer/>
+          </Route>
         </Switch>
       </Router>
     );
