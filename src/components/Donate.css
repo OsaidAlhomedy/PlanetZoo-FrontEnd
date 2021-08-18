@@ -3,11 +3,12 @@
  }
  
  .paragraph {
-    text-align: justify;
-    padding-left: 10%;
-    padding-right: 10%;
+    text-align: center;
+    /* padding-left: 10%;
+    padding-right: 10%; */
     font-size: large;
     font-weight: bold;
+    padding: 5%
  }
 
  .para {
@@ -19,4 +20,7 @@
      padding-left: 10%;
  }
  
-
+ .catImg{
+   height: 500px;
+   width: 350px; 
+}

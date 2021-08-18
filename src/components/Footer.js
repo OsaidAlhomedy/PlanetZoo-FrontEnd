@@ -20,7 +20,7 @@ class Footer extends React.Component {
           <section className="mb-4"></section>
         </div>
         <div className="text-center p-3">
-          <img alt="logo" src={imgLogo} width="300px" />
+          <img alt="logo" src={imgLogo}  />
           <br></br>
           Contact Us at :<br></br>
           {/* <a className="text-white" href="/aboutus">About Us</a> */}
