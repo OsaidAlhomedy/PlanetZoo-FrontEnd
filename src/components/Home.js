@@ -10,6 +10,8 @@ import abusha3ar from '../assets/don-hassan-HZjI3mXpFXA-unsplash.jpg'
 import Bird from '../assets/طائر-الكوكتيل-825x510.jpg'
 import hair from '../assets/mahdi-bafande-59zCZ2pVC9Y-unsplash.jpg'
 import jajeh from '../assets/jesse-schoff-qVneOrTN06c-unsplash.jpg'
+import kitten from '../assets/dog2.jpg'
+
 import Blogs from './Blogs';
 import BlogCards from "./BlogCards";
 import InfoForm from "./InfoForm";
@@ -157,9 +159,38 @@ class Home extends React.Component {
           </Carousel>
         </Row>
         <Row>
-          <BlogCards />
-        </Row>
+          <Col className="bg-secondary text-light text-center " md={4} >
 
+            <pre className="h2">
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              
+              <h1 class="blogcard">THE</h1>
+              <h1>BLOG</h1>
+            </pre>
+
+          </Col>
+          <Col>
+          <BlogCards />
+          </Col>
+          
+        </Row>
+        <br></br>
+
+        <Row>
+        <div class = "container">
+        
+          <img src = {kitten} alt = "Freedom Blog" width="100%"  />
+          <div class="center-left">Getting a Pet in Planet-Zoo</div>
+          <div class="bottom-left">
+          The Planet-Zoo are very pet-friendly and pet-connected.<br></br> 
+          There are plenty of pets available for adoption from rescue centres. </div>
+          
+      </div>
+        </Row>
+        <br></br>
 
 
 
@@ -186,35 +217,26 @@ class Home extends React.Component {
             </Row>
 
           </Col>
-          <Col className="bg-success text-light text-center " md={4} >
+          <Col className="bg-secondary text-light text-center " md={4} >
 
             <pre className="h2 ">
-              K
-              {<br/>}
-              N
-              {<br/>}
-              O
-              {<br/>}
-              W
-              {<br/>}
-              {<br/>}
-              M
-              {<br/>}
-              O
-              {<br/>}
-              R
-              {<br/>}
-              E
-              {<br/>}
-              !
+              <br></br>
+              <br></br>
+
+              KNOW  
+              <br></br>
+              MORE !
+              
             </pre>
 
           </Col>
         </Row>
-               
-          <Row>
-            <Autofill />
-          </Row>
+
+        <Row>
+          <Autofill />
+        </Row>
+<br></br>
+<br></br>
 
 
 

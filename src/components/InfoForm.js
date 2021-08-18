@@ -65,8 +65,9 @@ class InfoForm extends React.Component {
                                 <Button variant="outline-success " size="lg" type="submit">Search</Button>
                             </div>
                         </Form>
+                        <br></br>
                         {this.collect() &&
-                            <div>{this.state.factData}</div>
+                            <div class='infoStyle'>{this.state.factData}</div>
                         }
 
                     </Row>

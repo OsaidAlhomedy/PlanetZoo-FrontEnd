@@ -38,14 +38,14 @@ class BlogCards extends React.Component {
                   
                   <Col >
               
-                    <Card style={{ width: '18rem' }}>
+                    <Card bg='Dark' text='Primary' style={{ width: '15rem' }}>
                       <Card.Img variant="top" src={n.img} />
                       <Card.Body>
                         <Card.Title>{n.title}</Card.Title>
-                        <Card.Text>
+                        <Card.Text >
                           {n.article.slice(0,165 ) + "......"}
                           <br/><br/>
-                          <Button href="/blog"> Read More Baby! </Button>
+                          <Button href="/blog"> Read More! </Button>
                         </Card.Text>
                       </Card.Body>
                     </Card>
