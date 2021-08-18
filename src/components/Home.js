@@ -209,42 +209,60 @@ class Home extends React.Component {
         </Row>
 
         <Row className="rowBlog h-75">
-          <Col className="d-flex bg-success text-light text-center blogCol justify-content-center align-items-center" md={4}>
-              <h2 style={{fontSize:"160px"}}>The{<br/>}Blog</h2>
+          <Col
+            className="d-flex bg-success text-light text-center blogCol justify-content-center align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "160px" }}>The{<br />}Blog</h2>
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
             <BlogCards />
           </Col>
         </Row>
 
-        <Row className="dividerRow h-25">
-          
-        </Row>
+        <Row className="dividerRow h-25"></Row>
 
         <Row className="border ">
           <Col md={8}>
-            <Row className="border">
-              <InfoForm />
+            <Row className="d-flex justify-content-center border h-50 pt-4">
+              <Col md={6}>
+                <Row className="justify-content-center">
+                  <h2 className="text-center">Search For An Animal !</h2>
+                  <p className="text-center">
+                    You can use this tool to search for data about your favorite
+                    animal or pet:
+                  </p>
+                </Row>
+                <InfoForm />
+              </Col>
             </Row>
-            <Row>
-              <Col className="border">
-                <h3> Git Random Fact About Random Animal </h3>
+            <Row className="border h-50">
+              <Col className="border pt-4">
+                <h2 className="text-center">
+                  {" "}
+                  Git Random Fact About Random Animal{" "}
+                </h2>
               </Col>
 
-              <Col className="border">
-                <h3>Cruelty free checker </h3>
+              <Col className="border pt-4">
+                <h2 className="text-center">Cruelty free checker </h2>
+                <Row>
+                  <Autofill />
+                </Row>
               </Col>
             </Row>
           </Col>
-          <Col className="bg-secondary text-light text-center " md={4}>
-            <h1>
-
-            </h1>
+          <Col
+            className="d-flex bg-success text-light text-center blogCol justify-content-evenly align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "160px" }}>
+              K{<br />}N{<br />}O{<br />}W
+            </h2>
+            <h2 style={{ fontSize: "160px" }}>
+              M{<br />}O{<br />}R{<br />}E
+            </h2>
           </Col>
-        </Row>
-
-        <Row>
-          <Autofill />
         </Row>
       </>
     );

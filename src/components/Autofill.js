@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Hint } from "react-autocomplete-hint";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Autofill() {
   const [hintData, setHintData] = useState([]);
   const [text, setText] = useState("");
+  const [company, setCompany] = useState("s");
 
   const getData = async () => {
     const res = await axios.get("http://localhost:3010/company");
@@ -21,32 +22,42 @@ function Autofill() {
 
   function condition() {
     if (hintData.includes(text)) {
-      console.log("true");
-    } else if ((text == "")) {
-      console.log("nothing");
+      setCompany(true);
+    } else if (text == "") {
+      setCompany("s");
     } else {
-      console.log("false");
+      setCompany(false);
     }
   }
 
   return (
-    <div className="App">
-      <h5>Enter your company's name</h5>
-      {/* <code>{`[${hintData.toString()}]`}</code> */}
-      <br />
-
-      <Hint options={hintData} allowTabFill>
-        <input
-          className="input-with-hint"
-          name="khaled"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-      </Hint>
-      <Button onClick={condition} variant="info">
-        Submit{" "}
-      </Button>
-    </div>
+    <Col>
+      <Row>
+        <Col>
+          <h5>Enter The Company's Name</h5>
+          <Hint options={hintData} allowTabFill>
+            <input
+              className="input-with-hint"
+              name="khaled"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+          </Hint>
+          <Button onClick={condition} variant="info">
+            Submit{" "}
+          </Button>
+        </Col>
+      </Row>
+      <Row>
+        {company == true ? (
+          <h2>This Company Hates Animals</h2>
+        ) : company == false ? (
+          <h2>This Company Supports Animals</h2>
+        ) : (
+          <h2>No results found</h2>
+        )}
+      </Row>
+    </Col>
   );
 }
 
