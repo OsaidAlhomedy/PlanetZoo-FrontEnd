@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Card, Container, Row, Col ,Button} from 'react-bootstrap'
+import { Card, Container, Row, Col, Button } from 'react-bootstrap'
 
 
 
@@ -29,29 +29,30 @@ class BlogCards extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container fluid >
           <Row>
-            {this.state.blogs ? this.state.blogs.map( (n, i) => {
+            {this.state.blogs ? this.state.blogs.map((n, i) => {
               console.log(this.state.blogs);
-              if(i<3){         
-                   return (
+              if (i < 3) {
+                return (
+                  
                   <Col >
-                    <Card style={{ width: '18rem' }}>
+              
+                    <Card bg="secondary" text="white"  style={{ width: '15rem' }}>
                       <Card.Img variant="top" src={n.img} />
                       <Card.Body>
-                        <Card.Title>{n.title}</Card.Title>
-                        <Card.Text>
-                        {n.article.slice(0,150) +".............."}
-                        <a href="/blog"> Read More Baby! </a>
+                        <Card.Title color="white">{n.title}</Card.Title>
+                        <Card.Text >
+                          {n.article.slice(0,165 ) + "......"}
+                          <br/><br/>
+                          <Button href="/blog"> Read More! </Button>
                         </Card.Text>
-                        
                       </Card.Body>
                     </Card>
                   </Col>
                 )
-                   }
-            } ):null}
-
+              }
+            }) : null}
           </Row>
         </Container>
       </>
