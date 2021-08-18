@@ -11,7 +11,7 @@ import {
   Container,
 } from "react-bootstrap";
 import axios from "axios";
-import LoginButton from "./Authenticate";
+import LoginButton from "./LoginButton";
 import LogoutButton from "./Logout";
 import Logo from "../assets/logoBottomText-01.png";
 

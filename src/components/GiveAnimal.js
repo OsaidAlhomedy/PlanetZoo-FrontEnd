@@ -14,7 +14,6 @@ import "./GiveAnimal.css";
 
 import AnimalUpdateModal from "./AnimalUpdateModal";
 
-
 class GiveAnimal extends Component {
   constructor(props) {
     super(props);
@@ -188,7 +187,6 @@ class GiveAnimal extends Component {
         </Row>
 
         <Row className="cardContainer mb-4 bg-light py-5">
-
           {this.state.petData ? (
             this.state.petData.map((animal) => (
               <GivenPetCard
@@ -203,12 +201,12 @@ class GiveAnimal extends Component {
                 deletePet={this.deleteAnimal}
                 id={animal._id}
                 updateAnimalFormShow={this.updateAnimalFormShow}
+                adoptedBy={animal.adoptedBy}
               />
             ))
           ) : (
             <p></p>
           )}
-          
         </Row>
 
         <Row className="justify-content-center">
@@ -308,7 +306,6 @@ class GiveAnimal extends Component {
             updateAnimal={this.updateAnimal}
           />
         )}
-
       </Container>
     );
   }

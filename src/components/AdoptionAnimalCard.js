@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class AdoptionAnimalCard extends Component {
   render() {
     return (
       <Col className="d-flex justify-content-center">
-        <Card style={{ width: "22rem" }}>
+        {this.props.adoptionStatus && (
+          <div className="adoptedCard">
+            Adopted
+            <p>By: {this.props.adoptedBy}</p>
+            😻
+          </div>
+        )}
+        <Card className="m-3" style={{ width: "22rem" }}>
           <Card.Img variant="top" src={this.props.img} alt="pet image" />
           <Card.Body>
             <Card.Title className="mb-1">
@@ -30,17 +38,28 @@ class AdoptionAnimalCard extends Component {
               </Row>
             </Card.Text>
           </Card.Body>
-
-          <Card.Body>
+          <Card.Footer>
             <Row>
+              {!this.props.adoptionStatus ? (
                 <Button
                   variant="success"
-                  onClick={() => this.props.deletePet(this.props.id)}
+                  onClick={() =>
+                    this.props.adoptAnimal(this.props.id, this.props.adoptName)
+                  }
                 >
                   Adopt
                 </Button>
+              ) : <Button
+              variant="success"
+              disabled
+              onClick={() =>
+                this.props.adoptAnimal(this.props.id, this.props.adoptName)
+              }
+            >
+              Adopt
+            </Button>}
             </Row>
-          </Card.Body>
+          </Card.Footer>
         </Card>
       </Col>
     );

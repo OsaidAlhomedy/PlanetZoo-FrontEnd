@@ -5,7 +5,14 @@ class GivenPetCard extends Component {
   render() {
     return (
       <Col className="d-flex justify-content-center">
-        <Card style={{ width: "22rem" }}>
+        {this.props.adoptionStatus && (
+          <div className="adoptedCard">
+            Adopted
+            <p>By: {this.props.adoptedBy}</p>
+            😻
+          </div>
+        )}
+        <Card className="m-3" style={{ width: "22rem" }}>
           <Card.Img variant="top" src={this.props.img} alt="pet image" />
           <Card.Body>
             <Card.Title className="mb-1">
@@ -26,46 +33,69 @@ class GivenPetCard extends Component {
               </Row>
 
               <Row>
-
                 <article className="text-justify">
                   {this.props.description}
                 </article>
-
               </Row>
             </Card.Text>
           </Card.Body>
-
-          <Card.Body>
+          <Card.Footer>
             <Row>
-              <Col md={8}>
-                <Button
-                  variant="danger"
-                  onClick={() => this.props.deletePet(this.props.id)}
-                >
-                  Changed my mind
-                </Button>
-              </Col>
-              <Col md={4}>
-                <Button
-                  variant="warning"
+              {!this.props.adoptionStatus ? (
+                <>
+                  <Button
+                    variant="danger"
+                    onClick={() => this.props.deletePet(this.props.id)}
+                  >
+                    Changed my mind
+                  </Button>
 
-                  onClick={() =>
-                    this.props.updateAnimalFormShow(
-                      this.props.name,
-                      this.props.type,
-                      this.props.breed,
-                      this.props.age,
-                      this.props.description,
-                      this.props.id
-                    )
-                  }
+                  <Button
+                    variant="warning"
+                    onClick={() =>
+                      this.props.updateAnimalFormShow(
+                        this.props.name,
+                        this.props.type,
+                        this.props.breed,
+                        this.props.age,
+                        this.props.description,
+                        this.props.id
+                      )
+                    }
+                  >
+                    Update
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    variant="danger"
+                    disabled
+                    onClick={() => this.props.deletePet(this.props.id)}
+                  >
+                    Changed my mind
+                  </Button>
 
-                >
-                  Update
-                </Button>
-              </Col>
+                  <Button
+                    variant="warning"
+                    disabled
+                    onClick={() =>
+                      this.props.updateAnimalFormShow(
+                        this.props.name,
+                        this.props.type,
+                        this.props.breed,
+                        this.props.age,
+                        this.props.description,
+                        this.props.id
+                      )
+                    }
+                  >
+                    Update
+                  </Button>
+                </>
+              )}
             </Row>
-          </Card.Body>
+          </Card.Footer>
         </Card>
       </Col>
     );

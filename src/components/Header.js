@@ -4,23 +4,37 @@ import { Navbar, Container, Nav, NavDropdown, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import imgLogo from "../assets/logoRightText-01.png";
 import LogoutButton from "./Logout";
+import LoginButton from "./LoginButton";
 
 class Header extends React.Component {
   render() {
     const { user, isAuthenticated } = this.props.auth0;
 
     return (
-      <Container fluid >
+
+      <Container fluid>
+
         <Row>
           <Navbar bg="dark" variant="dark" className="py-2">
-            <Navbar.Brand href="/" className="ml-2">
+            <Navbar.Brand href="/" className="ml-4">
               <img alt="logo" src={imgLogo} width="250px" />
             </Navbar.Brand>
-            <Nav className="navbar-brand">
-              <Nav.Link href="/" class="navbar-brand"> Home </Nav.Link>
-              <Nav.Link href="blog">Blog</Nav.Link>
+
+            <Nav>
+              <Nav.Link className="h4" href="/">
+                {" "}
+                Home{" "}
+              </Nav.Link>
+              <Nav.Link className="h4" href="blog">
+                Blog
+              </Nav.Link>
+
               {isAuthenticated ? (
-                <NavDropdown title="Adopt/Donate" id="basic-nav-dropdown">
+                <NavDropdown
+                  className="h4"
+                  title="Adopt/Donate"
+                  id="basic-nav-dropdown"
+                >
                   <NavDropdown.Item href="adoption">
                     AdoptAnAnimal
                   </NavDropdown.Item>
@@ -35,20 +49,28 @@ class Header extends React.Component {
                 ""
               )}
             </Nav>
-            <Nav className="ms-auto , navbar-brand">
-              <NavDropdown
-                title={
-                  isAuthenticated ? `Hello, ${user.name}` : `Hello, Guest `
-                }
-                id="basic-nav-dropdown"
-              >
-                <NavDropdown.Item href="profile">Profile</NavDropdown.Item>
-                {isAuthenticated ? (
-                  <NavDropdown.Item>{<LogoutButton />}</NavDropdown.Item>
-                ) : (
-                  <NavDropdown.Item href="login">Login</NavDropdown.Item>
-                )}
-              </NavDropdown>
+
+            <Nav className="ms-auto align-items-center">
+              {isAuthenticated ? (
+                <Nav.Link className="h4" href="profile">
+                  Hello, {user.name}
+                </Nav.Link>
+              ) : (
+                <Nav.Link className="h4" href="profile">
+                  Hello, Guest
+                </Nav.Link>
+              )}
+
+              {isAuthenticated ? (
+                <Nav.Link >
+                  <LogoutButton />
+                </Nav.Link>
+              ) : (
+                <Nav.Link >
+                  <LoginButton />
+                </Nav.Link>
+              )}
+
             </Nav>
           </Navbar>
         </Row>
