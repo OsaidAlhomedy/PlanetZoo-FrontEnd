@@ -210,7 +210,7 @@ class Home extends React.Component {
 
         <Row className="rowBlog h-75">
           <Col className="d-flex bg-success text-light text-center blogCol justify-content-center align-items-center" md={4}>
-              <h2 style={{fontSize:"100px"}}>The{<br/>}Blog</h2>
+              <h2 style={{fontSize:"160px"}}>The{<br/>}Blog</h2>
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
             <BlogCards />
@@ -237,13 +237,9 @@ class Home extends React.Component {
             </Row>
           </Col>
           <Col className="bg-secondary text-light text-center " md={4}>
-            <pre className="h2 ">
-              <br></br>
-              <br></br>
-              KNOW
-              <br></br>
-              MORE !
-            </pre>
+            <h1>
+
+            </h1>
           </Col>
         </Row>
 

@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
 .loadingImg {
   margin-top: 200px;
   width: 500px;
@@ -89,6 +93,6 @@
   background-size: cover;
 }
 
-.blogCol{
-	
+.blogCol {
+  font-family: "Anton", sans-serif !important;
 }

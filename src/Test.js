@@ -11,9 +11,8 @@ import Blog from "./components/Blogs";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
 import GiveAnimal from "./components/GiveAnimal";
-import AboutUs from "./components/AboutUs"
+import AboutUs from "./components/AboutUs";
 import Adoption from "./components/Adoption";
-
 import Donate from "./components/Donate";
 
 class Test extends Component {
@@ -62,9 +61,9 @@ class Test extends Component {
             <Footer />
           </Route>
           <Route exact path="/aboutus">
-            <Header/>
-          <AboutUs/>
-          <Footer/>
+            <Header />
+            <AboutUs />
+            <Footer />
           </Route>
         </Switch>
       </Router>
