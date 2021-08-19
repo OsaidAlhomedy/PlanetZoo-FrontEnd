@@ -10,6 +10,7 @@ class InfoForm extends React.Component {
       title: "",
       extract: "",
     };
+  }
 
   addFact = async (event) => {
     event.preventDefault();
@@ -65,12 +66,12 @@ class InfoForm extends React.Component {
               </Button>
             </div>
           </Form>
+        </Row>
+        {this.collect() && (
+          <Row>
+            <Col>{this.state.factData}</Col>
           </Row>
-          {this.collect() && (
-            <Row>
-              <Col>{this.state.factData}</Col>
-            </Row>
-          )}
+        )}
       </Col>
     );
   }

@@ -11,15 +11,12 @@ import {
 } from "react-bootstrap";
 import "../Test.css";
 import { Route } from "react-router-dom";
-import axios from "axios";
 import huski from "../assets/jesse-schoff-i2DefZ6PCN0-unsplash.jpg";
 import snjab from "../assets/david-solce-PhOAIvz3fBA-unsplash.jpg";
 import abusha3ar from "../assets/don-hassan-HZjI3mXpFXA-unsplash.jpg";
 import Bird from "../assets/sad_cat_hero.jpg";
 import hair from "../assets/mahdi-bafande-59zCZ2pVC9Y-unsplash.jpg";
 import jajeh from "../assets/jesse-schoff-qVneOrTN06c-unsplash.jpg";
-import kitten from "../assets/dog2.jpg";
-
 import Blogs from "./Blogs";
 import BlogCards from "./BlogCards";
 import InfoForm from "./InfoForm";
