@@ -7,13 +7,12 @@ import {
   Row,
   Col,
   FloatingLabel,
-  Image
+  Image,
 } from "react-bootstrap";
 import Article from "./Article";
 import axios from "axios";
 import Reviews from "./Reviews";
-import blog from '../assets/blog.jpg'
-
+import blog from "../assets/blog.jpg";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -67,7 +66,6 @@ class Blog extends React.Component {
         console.log(err);
       });
   };
-  
 
   fileHandler = async (e) => {
     console.log(e.target.files[0]);
@@ -107,15 +105,12 @@ class Blog extends React.Component {
 
   render() {
     return (
-     
-      <Container fluid>
-          <Row>
-      <Image src={blog} alt='poster' fluid/>
-      </Row> 
+      <Container fluid className="backGroundGreen">
         <Row>
-          
-
-          <Col>
+          <Image src={blog} alt="poster" fluid />
+        </Row>
+        <Row className="mt-5">
+          <Col className="d-flex justify-content-center">
             <Col md={10}>
               {this.state.blogsData
                 ? this.state.blogsData.map((blog) => (
@@ -130,12 +125,11 @@ class Blog extends React.Component {
             </Col>
           </Col>
 
-          <Col  md={5}>
-          <Reviews />
-        </Col>
+          <Col md={5}>
+            <Reviews />
+          </Col>
         </Row>
 
-        
         <Row className="bg-light py-5">
           <Form onSubmit={(event) => this.addBlog(event)}>
             <Form.Group className="mb-5" id="formMaybe">

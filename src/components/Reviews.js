@@ -51,12 +51,12 @@ export class Reviews extends Component {
     return (
       <>
      
-          <Form onSubmit={(event) => this.addReview(event)}>
+          <Form className="mb-5" onSubmit={(event) => this.addReview(event)}>
           <Form.Group  controlId="exampleForm.ControlTextarea1 ">
-            <Form.Label> add Your Review </Form.Label>
+            <Form.Label className="h2 text-center"> Please Add Your Anonymous Feedback </Form.Label>
             <Form.Control as="textarea" name="review" />
           </Form.Group>
-          <Button  className="mb-3 mt-3"  variant="primary" type="submit">
+          <Button  className="my-3"  variant="primary" type="submit" style={{width:"200px"}}>
             Submit
           </Button>
         </Form>
@@ -74,7 +74,7 @@ export class Reviews extends Component {
                       data-radius="none"
                     >
                       <div  class="content">
-                        <h6 class="category">Reviews</h6>
+                        <h3 className="text-dark mb-3">Feedback</h3>
                         <h4 class="title">
                           {/* <a href="#">Blue Card</a> */}
                         </h4>
