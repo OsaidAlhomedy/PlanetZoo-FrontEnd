@@ -12,7 +12,7 @@ function Autofill() {
   const [company, setCompany] = useState("s");
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:3010/company");
+    const res = await axios.get(`${process.env.REACT_APP_SERVER}/company`);
     var hintArray = [];
     res.data[0].checkerData.map((a) => hintArray.push(a));
     setHintData(hintArray);
