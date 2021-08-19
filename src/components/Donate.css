@@ -8,13 +8,13 @@
     padding-right: 10%; */
     font-size: large;
     font-weight: bold;
-    padding: 5%
+    padding: 2%
  }
 
  .para {
     text-align: justify;
-    padding-right: 10%;
-    padding-top: 3%;
+    padding-left: 15%; 
+     padding-top: 3%;
  }
 
  iframe{
@@ -24,4 +24,22 @@
  .catImg{
    height: 500px;
    width: 350px; 
+   margin-left: 25%;
+   
 }
+
+.dividerRow2 {
+   background: url("https://wallpapercave.com/wp/wp2544022.jpg");
+   /* background: url(../assets/onur-binay-E18nZ_OHh04-unsplash.jpg); */
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-clip: padding-box;
+   background-position: center;
+   background-size: cover;
+ }
+ .paragraph1{
+   padding-right: 15%; 
+   text-align: justify;
+
+
+ }
