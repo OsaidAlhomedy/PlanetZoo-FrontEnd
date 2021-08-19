@@ -10,7 +10,6 @@ class InfoForm extends React.Component {
       title: "",
       extract: "",
     };
-  }
 
   addFact = async (event) => {
     event.preventDefault();

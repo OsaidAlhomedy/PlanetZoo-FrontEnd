@@ -35,6 +35,7 @@ class Test extends Component {
           <Route exact path="/blog">
             <Header />
             <Blog />
+            
             <Footer />
           </Route>
           <Route exact path="/profile">
