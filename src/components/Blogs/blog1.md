@@ -1,6 +1,6 @@
 ## 5 Animals That are Going to Extinct:
 
-Who is to blame if Earth is on the verge of the "sixth mass extinction," as many scientists believe? Why is there such a dramatic reduction in biodiversity, and how can we stop it?
+Who is to blame if Earth is on the verge of the "sixth mass extinction" as many scientists believe? Why is there such a dramatic reduction in biodiversity, and how can we stop it?
 Humans are responsible for the majority of the problems that endangered animals face. Researchers warned in 2020 that more than 500 vertebrate species are on the verge of extinction in the next 20 years. Human behavior is driving this extinction disaster first and foremost.
 And here is a list of it :
 

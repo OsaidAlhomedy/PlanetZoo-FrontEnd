@@ -11,7 +11,7 @@ import {
   Container,
 } from "react-bootstrap";
 import axios from "axios";
-import LoginButton from "./Authenticate";
+import LoginButton from "./LoginButton";
 import LogoutButton from "./Logout";
 import Logo from "../assets/logoBottomText-01.png";
 
@@ -116,7 +116,6 @@ class Login extends Component {
                   >
                     <h4 className="text-dark">Don't have an account ?</h4>
                     <LoginButton />
-                    <LogoutButton />
                   </Form.Group>
                 </Form>
               </Col>

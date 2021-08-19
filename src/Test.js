@@ -2,15 +2,22 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 import "./Test.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import loadingGIF from "./assets/loading.gif";
 import Header from "./components/Header";
+import Blog from "./components/Blogs";
+import Profile from "./components/Profile";
+import Home from "./components/Home";
+import GiveAnimal from "./components/GiveAnimal";
+import AboutUs from "./components/AboutUs";
+import Adoption from "./components/Adoption";
+import Donate from "./components/Donate";
 
 class Test extends Component {
   render() {
-    const { isLoading, error } = this.props.auth0;
-
+    const { isLoading, error, isAuthenticated } = this.props.auth0;
     return isLoading ? (
       <div className="text-center">
         <img className="loadingImg" src={loadingGIF} alt="loading" />
@@ -21,7 +28,45 @@ class Test extends Component {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Login />;
+            <Header />
+            <Home />
+            <Footer />
+          </Route>
+          <Route exact path="/blog">
+            <Header />
+            <Blog />
+
+            <Footer />
+          </Route>
+          <Route exact path="/profile">
+            <Header />
+            <Profile />
+            <Footer />
+          </Route>
+          <Route exact path="/donation">
+            <Header />
+            <Donate />
+            <Footer />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+
+          <Route exact path="/adoption">
+            <Header />
+            <Adoption />
+            <Footer />
+          </Route>
+
+          <Route exact path="/giveAnimals">
+            <Header />
+            <GiveAnimal />
+            <Footer />
+          </Route>
+          <Route exact path="/aboutus">
+            <Header />
+            <AboutUs />
+            <Footer />
           </Route>
         </Switch>
       </Router>
