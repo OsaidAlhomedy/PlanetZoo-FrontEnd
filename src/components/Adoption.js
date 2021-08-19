@@ -1,18 +1,10 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Row,
-  Col,
-  Form,
-  FloatingLabel,
-} from "react-bootstrap";
+import { Button, Container, Row, Col, Form, Image } from "react-bootstrap";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
-import GivenPetCard from "./GivenPetCard";
 import "./GiveAnimal.css";
 import AdoptionAnimalCard from "./AdoptionAnimalCard";
-import { Helmet } from "react-helmet";
+import AdoptionHero from "../assets/adoptioHero.png";
 
 class Adoption extends Component {
   constructor(props) {
@@ -24,9 +16,7 @@ class Adoption extends Component {
   }
 
   getAnimals = async () => {
-    const { user } = this.props.auth0;
-    const email = user.email;
-    const url = `${process.env.REACT_APP_SERVER}/getAnimal?email=${email}`;
+    const url = `${process.env.REACT_APP_SERVER}/getAnimalAdoption`;
     await axios
       .get(url)
       .then((result) => {
@@ -86,72 +76,112 @@ class Adoption extends Component {
   render() {
     const { user } = this.props.auth0;
     return (
-      <Container className="border">
-        <Row className="text-center mb-5">
-          <h1>Adopt An Animal</h1>
-          <p>
-            Animals need special care, so if you do not have the time to take
-            care of your pet, you can give it up for adoption here.
-          </p>
-          <p>
-            We know that life rarely goes according to plan and things don’t
-            always work out, including owning a pet. We’re here to help. If you
-            think you may need to give your dog up for adoption
-          </p>
+      <Container fluid className="border">
+        <Row>
+          <Image src={AdoptionHero} />
+        </Row>
+
+        <Row className="mb-5 bg-light pb-5 d-flex justify-content-center">
+          <Col md={10}>
+            <Row className="my-5 text-center">
+              <h1>Why you should consider Adopting ?</h1>
+            </Row>
+            <h2 className="mt-4">🐶 You'll save a life</h2>
+            <h4>
+              Each year, it's estimated that more than one million adoptable
+              dogs and cats are euthanized in the United States, simply because
+              too many pets come into shelters and too few people consider
+              adoption when looking for a pet. The number of euthanized animals
+              could be reduced dramatically if more people adopted pets instead
+              of buying them. When you adopt, you save a loving animal by making
+              them part of your family and open up shelter space for another
+              animal who might desperately need it.
+            </h4>
+            <h2 className="mt-4">🐰 You'll get a great animal</h2>
+            <h4>
+              Animal shelters and rescue groups are brimming with happy, healthy
+              pets just waiting for someone to take them home. Most shelter pets
+              wound up there because of a human problem like a move or a
+              divorce, not because the animals did anything wrong. Many are
+              already house-trained and used to living with families.
+            </h4>
+            <h2 className="mt-4">🤑 It’ll cost you less</h2>
+            <h4>
+              Usually when you adopt a pet, the cost of spay/neuter, first
+              vaccinations is included in the adoption price, which can save you
+              some of the up front costs of adding a new member to your family.
+              Depending on the animal, you may also save on housebreaking and
+              training expenses.
+            </h4>
+            <h2 className="mt-4">😼 Because of the bragging rights.</h2>
+            <h4>
+              No one needs to see another selfie unless it’s a selfie of you
+              with the adorable pet you just adopted! Adopt a pet, post those
+              pictures and let the well-earned likes roll in.
+            </h4>
+          </Col>
         </Row>
 
         <Row className="text-center mb-4">
-          <h1>The Library</h1>
+          <h1>Choose Your New Firend:</h1>
         </Row>
 
         <Row className="justify-content-center mb-5">
           <Col>
             <Form onSubmit={(event) => this.animalFilter(event)}>
               <Row>
-                <Col className="">
-                  <Row>
-                    <h4 className="text-center">Filtration</h4>
-                  </Row>
-                  <Row md={2}>
-                    <Button variant="primary" type="submit">
+                <Row md={3}>
+                  <Col>
+                    <Form.Label>Pet Type</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="petType"
+                      placeHolder="cat , dog , bird ..."
+                    />
+                  </Col>
+                  <Col>
+                    <Form.Label>Pet Age</Form.Label>
+                    <Form.Select name="petAge">
+                      <option value="All">All</option>
+                      <option value="Younger than 1 year">
+                        Younger than 1 year
+                      </option>
+                      <option value="Between 1 and 5 years">
+                        Between 1 and 5 years
+                      </option>
+                      <option value="Older than 5 years">
+                        Older than 5 years
+                      </option>
+                    </Form.Select>
+                  </Col>
+                  <Col>
+                    <Form.Label>Pet Availability</Form.Label>
+                    <Form.Select name="petStatus">
+                      <option value="All">All</option>
+                      <option value="false">Available for adoption</option>
+                      <option value="true">Adopted</option>
+                    </Form.Select>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="d-flex justify-content-evenly mt-5">
+                    <Button
+                      variant="primary"
+                      type="submit"
+                      style={{ width: "200px" }}
+                    >
                       Submit
                     </Button>
-                    <Button variant="danger" onClick={this.clearFilter}>
+
+                    <Button
+                      style={{ width: "200px" }}
+                      variant="danger"
+                      onClick={this.clearFilter}
+                    >
                       Clear
                     </Button>
-                  </Row>
-                </Col>
-                <Col>
-                  <Form.Label>Pet Type</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="petType"
-                    placeHolder="cat , dog , bird ..."
-                  />
-                </Col>
-                <Col>
-                  <Form.Label>Pet Age</Form.Label>
-                  <Form.Select name="petAge">
-                    <option value="All">All</option>
-                    <option value="Younger than 1 year">
-                      Younger than 1 year
-                    </option>
-                    <option value="Between 1 and 5 years">
-                      Between 1 and 5 years
-                    </option>
-                    <option value="Older than 5 years">
-                      Older than 5 years
-                    </option>
-                  </Form.Select>
-                </Col>
-                <Col>
-                  <Form.Label>Pet Availability</Form.Label>
-                  <Form.Select name="petStatus">
-                    <option value="All">All</option>
-                    <option value="false">Available for adoption</option>
-                    <option value="true">Adopted</option>
-                  </Form.Select>
-                </Col>
+                  </Col>
+                </Row>
               </Row>
             </Form>
           </Col>
@@ -173,7 +203,7 @@ class Adoption extends Component {
                 id={animal._id}
                 adoptName={user.name}
                 adoptAnimal={this.adoptAnimal}
-                adoptedBy = {animal.adoptedBy}
+                adoptedBy={animal.adoptedBy}
               />
             ))
           ) : (
