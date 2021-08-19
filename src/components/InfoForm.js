@@ -54,11 +54,11 @@ class InfoForm extends React.Component {
             <>
 
                 <Container>
-                    <Row>
+                    <Row >
                         <Form onSubmit={(event) => this.addFact(event)}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label >Search for an Animal</Form.Label>
-                                <Form.Control name="title" type="text" placeholder="Enter an Animal" size="lg" />
+                                <Form.Control name="title" type="text" placeholder="Enter an Animal" size="sm" />
                             </Form.Group>
                             <div className="d-grid gap-2">
 

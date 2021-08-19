@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Row, Image } from "react-bootstrap";
 import "./reviews.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
@@ -50,12 +50,13 @@ export class Reviews extends Component {
   render() {
     return (
       <>
+     
           <Form onSubmit={(event) => this.addReview(event)}>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label> add Review </Form.Label>
+          <Form.Group  controlId="exampleForm.ControlTextarea1 ">
+            <Form.Label> add Your Review </Form.Label>
             <Form.Control as="textarea" name="review" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button  className="mb-3 mt-3"  variant="primary" type="submit">
             Submit
           </Button>
         </Form>
@@ -63,19 +64,19 @@ export class Reviews extends Component {
           this.state.review.map((i) => {
               return (
             <div class="container bootstrap snippets bootdeys">
-              <div class="row">
+              <div class="row" className="pl-2 pr-2">
                 <div>
-                  <div class="card-big-shadow">
+                  <div  class="card-big-shadow">
                     <div
                       class="card card-just-text"
                       data-background="color"
-                      data-color="yellow"
+                      data-color="green"
                       data-radius="none"
                     >
-                      <div class="content">
-                        <h6 class="category">Best cards</h6>
+                      <div  class="content">
+                        <h6 class="category">Reviews</h6>
                         <h4 class="title">
-                          <a href="#">Blue Card</a>
+                          {/* <a href="#">Blue Card</a> */}
                         </h4>
                         <p class="description">{i.reviewData}</p>
                       </div>

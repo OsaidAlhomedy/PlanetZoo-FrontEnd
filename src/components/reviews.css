@@ -1,7 +1,6 @@
-body{margin-top:20px;}
+greenbody{margin-top:20px;}
 
 .card-big-shadow {
-    max-width: 320px;
     position: relative;
 }
 
@@ -27,7 +26,8 @@ body{margin-top:20px;}
     color: #FFFFFF;
 }
 .card.card-just-text .content {
-    padding: 50px 65px;
+    /* padding: 50px 65px; */
+    padding: 30px;
     text-align: center;
 }
 .card .content {
@@ -85,13 +85,13 @@ a:hover, a:focus {
 }
 
 .card[data-color="green"] {
-    background: #d5e5a3;
+    background: #50D890;
 }
 .card[data-color="green"] .description {
-    color: #60773d;
+    color: #ffffff;
 }
 .card[data-color="green"] .category {
-    color: #92ac56;
+    color: #ffffff;
 }
 
 .card[data-color="yellow"] {

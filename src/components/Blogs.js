@@ -7,10 +7,13 @@ import {
   Row,
   Col,
   FloatingLabel,
+  Image
 } from "react-bootstrap";
 import Article from "./Article";
 import axios from "axios";
 import Reviews from "./Reviews";
+import blog from '../assets/blog.jpg'
+
 
 class Blog extends React.Component {
   constructor(props) {
@@ -104,11 +107,13 @@ class Blog extends React.Component {
 
   render() {
     return (
-      <Container>
+     
+      <Container fluid>
+          <Row>
+      <Image src={blog} alt='poster' fluid/>
+      </Row> 
         <Row>
-          {/* <Col>
-            <h1>The Blog</h1>
-          </Col> */}
+          
 
           <Col>
             <Col md={10}>
@@ -125,7 +130,7 @@ class Blog extends React.Component {
             </Col>
           </Col>
 
-          <Col>
+          <Col  md={5}>
           <Reviews />
         </Col>
         </Row>
