@@ -6,12 +6,13 @@ import {
   Col,
   Form,
   FloatingLabel,
+  Image,
 } from "react-bootstrap";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import GivenPetCard from "./GivenPetCard";
 import "./GiveAnimal.css";
-
+import cartoonWoman from "../assets/cartoonWoman-01.jpg";
 import AnimalUpdateModal from "./AnimalUpdateModal";
 
 class GiveAnimal extends Component {
@@ -167,21 +168,47 @@ class GiveAnimal extends Component {
 
   render() {
     return (
-      <Container className="border">
+      <Container fluid className="border">
         <Row className="text-center mb-5">
-          <h1>Give Up Your Animal</h1>
-          <h3>Why & When ?</h3>
-          <p>
-            Animals need special care, so if you do not have the time to take
-            care of your pet, you can give it up for adoption here.
-          </p>
-          <p>
-            We know that life rarely goes according to plan and things don’t
-            always work out, including owning a pet. We’re here to help. If you
-            think you may need to give your dog up for adoption
-          </p>
+          <Image src={cartoonWoman} />
         </Row>
+        <Row className="mb-5 bg-light pb-5 d-flex justify-content-center">
+          <Col md={10}>
+            <h2 className="mt-4">
+              🔵 You can't make available the financial and personal resources
+              that a pet requires
+            </h2>
+            <h2 className="mt-4">
+              🔵 Physical inability to exercise him properly
+            </h2>
 
+            <h2 className="mt-4">
+              🔵 Inability to drive or use public transit to purchase food and
+              supplies or take him to the vet
+            </h2>
+
+            <h2 className="mt-4">🔵 Injury while attempting to care for him</h2>
+
+            <h2 className="mt-4">
+              🔵 A depletion of energy due to medical treatment, making it
+              increasingly difficult to provide care
+            </h2>
+            <h2 className="mt-4">
+              🔵 A worsening or newly-developed physical or mental disability
+              preventing adequate care
+            </h2>
+            <h2 className="mt-4">
+              🔵 Numerous high medical bills that make you financially unable to
+              provide care, especially if your pet also has serious medical
+              condition requiring expensive treatment
+            </h2>
+            <h2 className="mt-4">
+              🔵 Your condition has changed your lifestyle so much that your pet
+              is noticeably unhappy due to lack of attention, exercise or other
+              care
+            </h2>
+          </Col>
+        </Row>
         <Row className="text-center mb-4">
           <h1>Pets you have given up</h1>
         </Row>

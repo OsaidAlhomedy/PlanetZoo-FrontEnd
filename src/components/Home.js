@@ -1,55 +1,70 @@
 import React from "react";
-import Carousel from 'react-bootstrap/Carousel'
-import { Card, CardGroup, Button, Container, Row, Col, Form } from 'react-bootstrap'
-import '../Test.css'
-import { Route } from 'react-router-dom'
-import axios from 'axios';
-import huski from '../assets/jesse-schoff-i2DefZ6PCN0-unsplash.jpg'
-import snjab from '../assets/david-solce-PhOAIvz3fBA-unsplash.jpg'
-import abusha3ar from '../assets/don-hassan-HZjI3mXpFXA-unsplash.jpg'
-import Bird from '../assets/طائر-الكوكتيل-825x510.jpg'
-import hair from '../assets/mahdi-bafande-59zCZ2pVC9Y-unsplash.jpg'
-import jajeh from '../assets/jesse-schoff-qVneOrTN06c-unsplash.jpg'
-import kitten from '../assets/dog2.jpg'
+import Carousel from "react-bootstrap/Carousel";
+import {
+  Card,
+  CardGroup,
+  Button,
+  Container,
+  Row,
+  Col,
+  Form,
+} from "react-bootstrap";
+import "../Test.css";
+import { Route } from "react-router-dom";
+import axios from "axios";
+import huski from "../assets/jesse-schoff-i2DefZ6PCN0-unsplash.jpg";
+import snjab from "../assets/david-solce-PhOAIvz3fBA-unsplash.jpg";
+import abusha3ar from "../assets/don-hassan-HZjI3mXpFXA-unsplash.jpg";
+import Bird from "../assets/sad_cat_hero.jpg";
+import hair from "../assets/mahdi-bafande-59zCZ2pVC9Y-unsplash.jpg";
+import jajeh from "../assets/jesse-schoff-qVneOrTN06c-unsplash.jpg";
+import kitten from "../assets/dog2.jpg";
 
-import Blogs from './Blogs';
+import Blogs from "./Blogs";
 import BlogCards from "./BlogCards";
 import InfoForm from "./InfoForm";
 import Autofill from "./Autofill";
-
+import AboutUs from "./AboutUs";
+import RandomFactGen from "./RandomFactGen";
+import Sponsors from "./Sponsors";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       companyName: [],
-    }
+    };
   }
-
-
 
   render() {
     return (
       <>
         <Row>
-          <Carousel bg="dark" variant="" className="d-block,w-100,h-20">
+          <Carousel fade bg="dark" className="">
             <Carousel.Item>
-              <img
-                className="d-block w-100 h-20"
-                src={huski}
-                alt="Third slide"
-              />
-              <Carousel.Caption className='mb-5'>
-                <h3> “Dogs are our link to paradise. They don’t know jealousy or discontent.” </h3>
+              <img className="d-block w-100" src={huski} alt="Third slide" />
+              <Carousel.Caption className="mb-5 heroCaption">
+                <h3>
+                  {" "}
+                  “Dogs are our link to paradise. They don’t know jealousy or
+                  discontent.”{" "}
+                </h3>
                 <p> Milan Kundera </p>
-                <Route render={({ history }) => (
-                  <Button className='buttons'
-                    type='button'
-                    onClick={() => { history.push('/Adoption') }}
-                  >
-                    Adopt an Animal 😸
-                  </Button>
-                )} />
+                <Route
+                  render={({ history }) => (
+                    <Button
+                      className="buttons rounded-pill"
+                      type="button"
+                      variant="light"
+                      size="lg"
+                      onClick={() => {
+                        history.push("/adoption");
+                      }}
+                    >
+                      Adopt an Animal
+                    </Button>
+                  )}
+                />
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -57,20 +72,29 @@ class Home extends React.Component {
                 className="d-block w-100 h-20"
                 src={snjab}
                 alt="First slide"
-
               />
-              <Carousel.Caption className='mb-5'>
-                <h3>“Animals are such agreeable friends—they ask no questions; they pass no criticisms.” </h3>
+              <Carousel.Caption className="mb-5 heroCaption">
+                <h3>
+                  “Animals are such agreeable friends—they ask no questions;
+                  they pass no criticisms.”{" "}
+                </h3>
                 <p> George Eliot</p>
-                <Route render={({ history }) => (
-                  <Button className='buttons'
-                    type='button'
-                    onClick={() => { history.push('/Adoption') }}
-                  >
-                    Adopt an Animal 😸
-                  </Button>
-                )} />
-              </Carousel.Caption >
+                <Route
+                  render={({ history }) => (
+                    <Button
+                      className="buttons rounded-pill"
+                      type="button"
+                      variant="light"
+                      size="lg"
+                      onClick={() => {
+                        history.push("/adoption");
+                      }}
+                    >
+                      Adopt an Animal
+                    </Button>
+                  )}
+                />
+              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
@@ -78,36 +102,57 @@ class Home extends React.Component {
                 src={abusha3ar}
                 alt="First slide"
               />
-              <Carousel.Caption className='mb-5'>
-                <h3>“One small cat changes coming home to an empty house to coming home.” </h3>
+              <Carousel.Caption className="mb-5 heroCaption">
+                <h3>
+                  “One small cat changes coming home to an empty house to coming
+                  home.”{" "}
+                </h3>
                 <p> Pam Brown </p>
-                <Route render={({ history }) => (
-                  <Button className='buttons'
-                    type='button'
-                    onClick={() => { history.push('/Adoption') }}
-                  >
-                    Adopt an Animal  😸
-                  </Button>
-                )} />
+                <Route
+                  render={({ history }) => (
+                    <Button
+                      className="buttons rounded-pill"
+                      type="button"
+                      variant="light"
+                      size="lg"
+                      onClick={() => {
+                        history.push("/adoption");
+                      }}
+                    >
+                      Adopt an Animal
+                    </Button>
+                  )}
+                />
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item >
+            <Carousel.Item>
               <img
                 className="d-block w-100 h-20 "
                 src={Bird}
                 alt="First slide"
               />
-              <Carousel.Caption className='mb-5'>
-                <h3>“It is not only fine feathers that make fine birds.” </h3>
-                <p> Aesop </p>
-                <Route render={({ history }) => (
-                  <Button className='buttons'
-                    type='button'
-                    onClick={() => { history.push('/Adoption') }}
-                  >
-                    Adopt an Animal  😸
-                  </Button>
-                )} />
+              <Carousel.Caption className="mb-5 heroCaption">
+                <h3>
+                  “When I look into the eyes of an animal, I do not see an
+                  animal.
+                  <br /> I see a living being. I see a friend. I feel a soul.”{" "}
+                </h3>
+                <p> Anthony Douglas Williams </p>
+                <Route
+                  render={({ history }) => (
+                    <Button
+                      className="buttons rounded-pill"
+                      type="button"
+                      variant="light"
+                      size="lg"
+                      onClick={() => {
+                        history.push("/adoption");
+                      }}
+                    >
+                      Adopt an Animal
+                    </Button>
+                  )}
+                />
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -116,21 +161,29 @@ class Home extends React.Component {
                 src={hair}
                 alt="Second slide"
               />
-              <Carousel.Caption className='mb-5'>
-                <h3>“A dog is the only thing on earth that loves you more than you love yourself.” </h3>
+              <Carousel.Caption className="mb-5 heroCaption">
+                <h3>
+                  “A dog is the only thing on earth that loves you more than you
+                  love yourself.”{" "}
+                </h3>
                 <p>Josh Billings</p>
 
-                <Route render={({ history }) => (
-                  <Button className='buttons'
-                    type='button'
-                    onClick={() => { history.push('/Adoption') }}
-                  >
-                    Adopt an Animal  😸
-                  </Button>
-                )} />
+                <Route
+                  render={({ history }) => (
+                    <Button
+                      className="buttons rounded-pill"
+                      type="button"
+                      variant="light"
+                      size="lg"
+                      onClick={() => {
+                        history.push("/adoption");
+                      }}
+                    >
+                      Adopt an Animal
+                    </Button>
+                  )}
+                />
               </Carousel.Caption>
-
-
             </Carousel.Item>
 
             <Carousel.Item>
@@ -139,112 +192,124 @@ class Home extends React.Component {
                 src={jajeh}
                 alt="Second slide"
               />
-              <Carousel.Caption className="mb-5">
+              <Carousel.Caption className="mb-5 heroCaption">
                 <h3>“Animals are my friends, and I don’t eat my friends.”</h3>
                 <p> George Bernard Shaw</p>
-                <Route render={({ history }) => (
-                  <Button className='buttons'
-                    type='button'
-                    onClick={() => { history.push('/blog') }}
-                  >
-                    Adopt an Animal  😸
-                  </Button>
-                )} />
+                <Route
+                  render={({ history }) => (
+                    <Button
+                      className="buttons rounded-pill"
+                      type="button"
+                      variant="light"
+                      size="lg"
+                      onClick={() => {
+                        history.push("/blog");
+                      }}
+                    >
+                      Adopt an Animal
+                    </Button>
+                  )}
+                />
               </Carousel.Caption>
-
-
             </Carousel.Item>
-
-
           </Carousel>
         </Row>
-        <Row class="blogRow">
-          <Col className="bg-secondary text-light text-center " md={4} >
 
-            <pre className="h2">
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              
-              <h1 class="blogcard">THE</h1>
-              <h1>BLOG</h1>
-            </pre>
+        <Row className="rowBlog h-75">
+          <Col
+            className="d-flex bg-dark text-light text-center blogCol3 justify-content-center align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "160px" }}>The{<br />}Blog</h2>
+          </Col>
+          <Col className="d-flex justify-content-center align-items-center">
+            <BlogCards />
+          </Col>
+        </Row>
 
+        {/* <Row className="dividerRow h-25"></Row> */}
+
+        <Row className="">
+          <Col>
+            <Row className="d-flex justify-content-center h-100 border pt-4">
+              <Col md={10}>
+                <Row className="justify-content-center">
+                  <h2 className="text-center">Search For An Animal!</h2>
+                  <h5 className="text-center">
+                    You can use this tool to search for data about your favorite
+                    animal or pet:
+                  </h5>
+                </Row>
+                <Row>
+                  <InfoForm />
+                </Row>
+              </Col>
+            </Row>
+          </Col>
+
+          <Col>
+            <Row className="d-flex justify-content-center h-50">
+              <Col className="border pt-4">
+                <h2 className="text-center">Cruelty Free Checker </h2>
+                <h5 className="text-center">
+                  Check if a compony tests their products on animals
+                </h5>
+                <Autofill />
+              </Col>
+            </Row>
+
+            <Row className="border h-50 pt-4">
+              <Col className="">
+                <h2 className="text-center">
+                  {" "}
+                  Git Random Fact About Random Animal{" "}
+                </h2>
+                <p className="h5 text-center">
+                  Click the card to get a random fact
+                </p>
+                <RandomFactGen />
+              </Col>
+            </Row>
+          </Col>
+
+          <Col
+            className="d-flex bg-dark py-5 text-light text-center blogCol3 justify-content-evenly align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "160px" }}>
+              K{<br />}N{<br />}O{<br />}W
+            </h2>
+            <h2 style={{ fontSize: "160px" }}>
+              M{<br />}O{<br />}R{<br />}E
+            </h2>
+          </Col>
+        </Row>
+        {/* <Row className="dividerRow2 h-25"></Row> */}
+        <Row className="">
+          <Col
+            className="d-flex bg-dark text-light text-center blogCol3 justify-content-center align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "160px" }}>THE{<br />}TEAM</h2>
           </Col>
           <Col>
-          <BlogCards />
+            <AboutUs />
           </Col>
-          
         </Row>
-        <br></br>
 
-        <Row>
-        <div class = "container">
-        
-          <img src = {kitten} alt = "Freedom Blog" width="100%"  />
-          <div class="center-left">Getting a Pet in Planet-Zoo</div>
-          <div class="bottom-left">
-          The Planet-Zoo are very pet-friendly and pet-connected.<br></br> 
-          There are plenty of pets available for adoption from rescue centres. </div>
-          
-      </div>
-        </Row>
-        <br></br>
-
-
-
-
-
-
-
-
-        <Row className="border mt-5 ">
-
-          <Col md={8} >
-            <Row className='border'>
-              <InfoForm />
+        <Row className="h-50">
+          <Col>
+            <Row className="d-flex justify-content-center align-items-center border h-100">
+              <Sponsors />
             </Row>
-            <Row >
-              <Col className='border'>
-                <h3> Git Random Fact About Random Animal  </h3>
-              </Col>
-
-              <Col className='border'>
-                <h3>Cruelty free checker  </h3>
-              </Col>
-
-            </Row>
-
           </Col>
-          <Col className="bg-secondary text-light text-center " md={4} >
-
-            <pre className="h2 ">
-              <br></br>
-              <br></br>
-
-              KNOW  
-              <br></br>
-              MORE !
-              
-            </pre>
-
+          <Col
+            className="d-flex bg-dark text-light text-center blogCol3 justify-content-center align-items-center"
+            md={4}
+          >
+            <h2 style={{ fontSize: "120px" }}>THE{<br />}SPONSORS</h2>
           </Col>
         </Row>
-
-        <Row>
-          <Autofill />
-        </Row>
-<br></br>
-<br></br>
-
-
-
-
-
-
-
-
       </>
     );
   }
