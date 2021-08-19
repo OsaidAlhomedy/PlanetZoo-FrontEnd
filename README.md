@@ -1,16 +1,20 @@
 # PlanetZoo
 
-**Author**: Osaid Alhomidy (Aseed Alhammedi) / Naim AlOmari / Abdalla Hirzalla / Khaled Alqrainy / Alaa Baroud
+**Author**: Osaid Alhomidy (Aseed Alhammedi) / Naim AlOmari / Khaled Alqrainy / Alaa Baroud
 
-**Version**: 0.0.0
+**Version**: 1.0.0
 
 ## Overview
 
-A
+Planet Zoo is a website that allows people to help animals around the world in many ways. People can adopt a pet, donate food, donate money via PayPal. Also, you can explore information based on your search and read some blogs about animals.
 
 ## Getting Started
 
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. The user can enter the website using the url.
+
+2. The user can surf the home page or the blog page before logging in.
+
+3. The user can Adopt ,Donate or give up his/her animal each in each section.
 
 ## Architecture
 
